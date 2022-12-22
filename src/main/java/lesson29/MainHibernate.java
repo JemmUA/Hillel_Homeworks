@@ -1,20 +1,22 @@
 package lesson29;
 
-import lesson29.model.Customer;
-import lesson29.service.CustomerService;
-import lesson29.util.HibernateConfiguration;
+import lesson29.model.Client;
+import lesson29.service.ClientService;
 
 public class MainHibernate {
     public static void main(String[] args) {
-        HibernateConfiguration.getSessionFactory();
 
-//        CustomerService customerService = new CustomerService();
-//        Customer customer = new Customer();
-//        customer.setName("Hellen");
-//        customer.setAge(18);
-//        customer.setEmail("hellen@mail.ua");
-//        customer.setPhone(380951232232L);
-//        customer.setAbout("barber");
-//        customerService.save(customer);
+        ClientService clientService = new ClientService();
+//        Client client = new Client();
+//        client.setName("Oleg");
+//        client.setAge(32);
+//        client.setEmail("oleg@mail.ua");
+//        client.setPhone(380963242317L);
+//        client.setAbout("mechanic");
+//        clientService.save(client);
+
+//        clientService.getById(1);
+//        clientService.getAll();
+        clientService.deleteById(20);
     }
 }

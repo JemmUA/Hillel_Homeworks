@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Table (name = "clients")
 @Getter
 @Setter
-public class Customer {
+public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,5 +19,3 @@ public class Customer {
     private long phone;
     private String about;
 }
-
-
