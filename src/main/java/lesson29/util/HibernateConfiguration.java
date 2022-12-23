@@ -1,6 +1,8 @@
 package lesson29.util;
 
+import lesson29.model.Account;
 import lesson29.model.Client;
+import lesson29.model.Status;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -13,7 +15,9 @@ public class HibernateConfiguration {
             try {
                 Configuration configuration = new Configuration().configure();
 
+                configuration.addAnnotatedClass(Account.class);
                 configuration.addAnnotatedClass(Client.class);
+                configuration.addAnnotatedClass(Status.class);
 
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties());
