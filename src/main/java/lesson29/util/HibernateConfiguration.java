@@ -7,13 +7,18 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
+import java.util.Properties;
+
 public class HibernateConfiguration {
     private static SessionFactory sessionFactory;
 
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
-                Configuration configuration = new Configuration().configure();
+
+//                Properties properties = new Properties(); // для файла hibernate.properties
+//                Configuration configuration = new Configuration().addProperties(properties); // для файла hibernate.properties
+                Configuration configuration = new Configuration().configure(); // Для файла hibernate.cfg.xml
 
                 configuration.addAnnotatedClass(Account.class);
                 configuration.addAnnotatedClass(Client.class);

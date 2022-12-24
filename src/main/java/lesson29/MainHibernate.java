@@ -71,8 +71,8 @@ public class MainHibernate {
 //
 //        List<Client> clientsByAge = clientService.getByAge(33);
 //        clientsByAge.forEach(System.out::println);
-
-//        System.out.println(clientService.getByPhone(380972342155L));
+//
+        System.out.println(clientService.getByPhone(380972342155L));
 
     }
 }
