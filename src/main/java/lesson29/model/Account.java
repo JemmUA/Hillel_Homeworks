@@ -15,7 +15,8 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer client_id;
+    @Column(name = "client_id")
+    private Integer clientId;
     private String number;
     private  double value;
 }

@@ -28,7 +28,7 @@ public class MainHibernate {
 //        clientService.save(client);
 
 //        Account account = new Account();
-//        account.setClient_id(22);
+//        account.setClientId(22);
 //        account.setNumber("SG34378272");
 //        account.setValue(2134151.23);
 //        accountService.save(account);
@@ -72,7 +72,7 @@ public class MainHibernate {
 //        List<Client> clientsByAge = clientService.getByAge(33);
 //        clientsByAge.forEach(System.out::println);
 //
-        System.out.println(clientService.getByPhone(380972342155L));
+//        System.out.println(clientService.getByPhone(380972342155L));
 
     }
 }
