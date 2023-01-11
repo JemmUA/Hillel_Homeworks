@@ -2,7 +2,7 @@ package lesson04.entity.people;
 
 public final class Warrior extends Professional {
     //Data
-    int cartridges ;
+    int cartridges;
     int grenades;
     int armor;
     //Constructors
@@ -49,35 +49,39 @@ public final class Warrior extends Professional {
 
     //Implementing interfaces
     @Override
-    public void makeDiagnostic(){
-        System.out.println(getProfNameSurname() + " checks his weapon." );
+    public void makeDiagnostic() {
+        System.out.println(getProfNameSurname() + " checks his weapon.");
     }
+
     @Override
     public void makeReport() {
-        System.out.println(getProfNameSurname() + " reports on the state of the weapon." );
+        System.out.println(getProfNameSurname() + " reports on the state of the weapon.");
     }
 
 
     @Override
     public void makeJob(String underThreat) {
-        System.out.println(getProfNameSurname() + " protects peaceful life of " + underThreat + "."  );
-    }
-    @Override
-    public void doBest(String underThreat) {
-        System.out.println(getProfNameSurname() + " acts quickly, bravely and professionally to protect " + underThreat + "." );
+        System.out.println(getProfNameSurname() + " protects peaceful life of " + underThreat + ".");
     }
 
     @Override
-    public void haveRest () {
+    public void doBest(String underThreat) {
+        System.out.println(getProfNameSurname() + " acts quickly, bravely and professionally to protect " + underThreat + ".");
+    }
+
+    @Override
+    public void haveRest() {
         System.out.println(getProfNameSurname() + " has a rest in silence after battle. ");
     }
+
     @Override
-    public void getSalary () {
-        System.out.println(getProfNameSurname() + " receives a salary and sends it to relatives." );
+    public void getSalary() {
+        System.out.println(getProfNameSurname() + " receives a salary and sends it to relatives.");
     }
+
     @Override
-    public void getSatisfaction () {
-        System.out.println(getProfNameSurname() + " gets fame and love for protection." );
+    public void getSatisfaction() {
+        System.out.println(getProfNameSurname() + " gets fame and love for protection.");
     }
 
 }

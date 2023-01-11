@@ -1,4 +1,5 @@
 package lesson09;
+
 import lesson09.entity.MatchesHelper;
 import lesson09.entity.StringHelper;
 
@@ -38,7 +39,7 @@ public class MainStrings {
                 "+38 (050) 3343345",
                 "8 (050) 3343345",
                 "(050) 3343345"};
-        for (String phone: phones)
+        for (String phone : phones)
             matchesHelper.detectPattern(phone);
         System.out.println();
 
@@ -53,7 +54,7 @@ public class MainStrings {
                 "example-indeed@strange-example.com",
                 "test/test@test.com",
                 "example@s.example"};
-        for (String email: emails)
+        for (String email : emails)
             matchesHelper.detectPattern(email);
         System.out.println();
 
@@ -61,7 +62,7 @@ public class MainStrings {
         String[] birthdays = {
                 "31.01.2012",
                 "27 листопада 2001"};
-        for (String birthday: birthdays)
+        for (String birthday : birthdays)
             matchesHelper.detectPattern(birthday);
 
         System.out.println();
@@ -81,9 +82,9 @@ public class MainStrings {
         boolean notTired = true;
         Scanner typeScanner = new Scanner(System.in);
         System.out.println("Please, type phone, e-mail or date of birth for strict matches\nOR arbitrary string to find matches \nOR type \"q\" for exit:");
-        while (notTired){
+        while (notTired) {
             String type = typeScanner.nextLine();
-            if (type.toLowerCase().equals("q")){
+            if (type.toLowerCase().equals("q")) {
                 notTired = false;
             } else {
                 matchesHelper.detectPattern(type);

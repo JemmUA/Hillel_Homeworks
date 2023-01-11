@@ -5,7 +5,8 @@ import java.util.Iterator;
 public class InitializationData {
 
     Information information = new Information();
-    public Information fillData(){
+
+    public Information fillData() {
 
         String defaultNick = "Nick";
         String mailDomain = "mail.ua";
@@ -20,7 +21,7 @@ public class InitializationData {
 
             information.getNicksList().add(currentNick);
             information.getMailsList().add(currenMail);
-            information.getMailNickMap().put(currenMail,currentNick);
+            information.getMailNickMap().put(currenMail, currentNick);
         }
 
         //watch collections
@@ -36,7 +37,7 @@ public class InitializationData {
             currentNick = String.format("%s_%03d", defaultNick, 30);
             information.getNicksList().add(currentNick);
 
-            currenMail = String.format("%s@%s",information.getNicksList().get(30).toLowerCase(), mailDomain);
+            currenMail = String.format("%s@%s", information.getNicksList().get(30).toLowerCase(), mailDomain);
             information.getMailsList().add(currenMail);
 
             information.getMailNickMap().put(currenMail, currentNick);
@@ -60,7 +61,7 @@ public class InitializationData {
         return information;
     }
 
-    private void equalizeListSizes (Information information) {
+    private void equalizeListSizes(Information information) {
         System.out.print("\nEqualizing List Sizes. ");
 
         //set is smallest
@@ -72,19 +73,20 @@ public class InitializationData {
         }
         if ((smallestSize == information.getNicksList().size()) &&
                 (smallestSize == information.getMailsList().size()) &&
-                (smallestSize == information.getMailNickMap().size()) ){
-            System.out.println("All lists sizes equalizes " + information.getNicksList().size()) ;
+                (smallestSize == information.getMailNickMap().size())) {
+            System.out.println("All lists sizes equalizes " + information.getNicksList().size());
         } else {
             System.out.println("Equalizing of lists sizes failed." + information.getNicksList().size());
         }
     }
 
-    private void printCollectionsSizes(Information information){
+    private void printCollectionsSizes(Information information) {
         System.out.println("nicksList size = " + information.getNicksList().size() +
                 ", mailsList size = " + information.getMailNickMap().size() +
                 ", mailNickMap size = " + information.getMailNickMap().size());
     }
-    public void printCollections(Information information){
+
+    public void printCollections(Information information) {
         System.out.println(String.format("\nNicknames (Arraylist, size - %d): ", information.getNicksList().size()));
         for (int i = 0; i < information.getNicksList().size(); i++)
             System.out.println(information.getNicksList().get(i));
@@ -95,10 +97,11 @@ public class InitializationData {
 
         System.out.println(String.format("\nMatches email-nick (map, size - %d): ", information.getMailNickMap().size()));
         String[] emailsNicks = information.getMailNickMap().toString().substring(1, information.getMailNickMap().toString().length() - 1).split(", ");
-        for (String emailNick: emailsNicks) System.out.println(emailNick);
+        for (String emailNick : emailsNicks) System.out.println(emailNick);
 
     }
-    private String makeMail(String nick, String mailDomain){
+
+    private String makeMail(String nick, String mailDomain) {
         return String.format("%s@%s", nick.toLowerCase(), mailDomain);
     }
 }

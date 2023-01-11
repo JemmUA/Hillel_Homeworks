@@ -56,27 +56,32 @@ public abstract class RaceCar extends Car {
     public String getModelAndNumber(String suffix) {
         return getModel() + " #" + getCarNumber() + suffix;
     }
+
     public void standingStart() {
         System.out.println(getModelAndNumber(" ") + "performed standing start");
     }
+
     public void rollingStart() {
         System.out.println(getModelAndNumber(" ") + "performed rolling start");
     }
-    public float pitStop () {
-        pitStopTime = (float)(2 + 1.5 * Math.random());
+
+    public float pitStop() {
+        pitStopTime = (float) (2 + 1.5 * Math.random());
         System.out.println(getModelAndNumber(" ") + "performed pit stop: "
-                + String.format("%.1f", pitStopTime)  + " sec");
+                + String.format("%.1f", pitStopTime) + " sec");
         return pitStopTime;
     }
-    public void returnToBoxes(){
+
+    public void returnToBoxes() {
         System.out.println(getModelAndNumber(" ") + "returned to boxes");
     }
 
     public void drive(int laps) {
         System.out.print(this.getModelAndNumber(" ") + "traveled " + laps + " laps");
-        if (laps == 1 ) System.out.print("\b");
+        if (laps == 1) System.out.print("\b");
         System.out.println();
     }
+
     @Override
     public void refuel(int addFuel) {
         System.out.print(this.getModelAndNumber(". ") + "Refueling: ");
@@ -84,10 +89,10 @@ public abstract class RaceCar extends Car {
             System.out.println("You can't remove fuel!");
         } else {
             if (addFuel + getFuelLevel() <= getFuelTank()) {
-                setFuelLevel(getFuelLevel() + addFuel) ;
+                setFuelLevel(getFuelLevel() + addFuel);
                 System.out.println("added " + addFuel + " L. Level of fuel: " + getFuelLevel() + " L");
             } else {
-                System.out.println("fuel added " + (getFuelTank() - getFuelLevel())  + " L. Fueltank is full: " + getFuelTank() + " L");
+                System.out.println("fuel added " + (getFuelTank() - getFuelLevel()) + " L. Fueltank is full: " + getFuelTank() + " L");
                 setFuelLevel(getFuelTank());
             }
         }

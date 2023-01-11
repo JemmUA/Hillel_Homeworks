@@ -27,11 +27,11 @@ public class MainDataTypes {
         // Arithmetics
         System.out.println("Arithmetics");
         System.out.println((numberLong - numberShort) / 2);
-        System.out.println((numberLong +1) % 2);
+        System.out.println((numberLong + 1) % 2);
         System.out.println(numberShort * numberShort - 100);
         numberLong = ZERO * numberShort - numberShort;
         System.out.println(numberLong);
-        System.out.println((char)(symbolA + 1));
+        System.out.println((char) (symbolA + 1));
         System.out.println(symbolZ - symbolA);
         System.out.println();
 

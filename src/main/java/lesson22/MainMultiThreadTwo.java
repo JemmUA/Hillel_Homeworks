@@ -6,7 +6,7 @@ import lesson22.services.Synchronization;
 
 public class MainMultiThreadTwo {
 
-private static int downCount = 9;
+    private static int downCount = 9;
 
     public static void main(String[] args) throws InterruptedException {
         // Synchronized static METHOD
@@ -58,7 +58,7 @@ private static int downCount = 9;
 
     }
 
-    public static synchronized void synchroStaticMethod (){
+    public static synchronized void synchroStaticMethod() {
         System.out.println(Thread.currentThread().getName() + " started");
         for (int i = 0; i < 3; i++) {
             System.out.println("< " + downCount-- + " >");
@@ -73,7 +73,7 @@ private static int downCount = 9;
             synchronized (obejctLock) {
                 System.out.println(Thread.currentThread().getName() + ": print alphabet");
                 for (int i = 65; i < 91; i++) {
-                    System.out.print((char)i + " ");
+                    System.out.print((char) i + " ");
                     try {
                         Thread.sleep(200);
                     } catch (InterruptedException e) {

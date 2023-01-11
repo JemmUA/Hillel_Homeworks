@@ -1,9 +1,9 @@
 package lesson14.grenericsTraining;
 
-public class ObjectHolder <I, D, S> {
-    private I objectI ;
-    private D objectD ;
-    private S objectS ;
+public class ObjectHolder<I, D, S> {
+    private I objectI;
+    private D objectD;
+    private S objectS;
 
     public ObjectHolder(I objectI, D objectD, S objectS) {
         this.objectI = objectI;
@@ -26,6 +26,7 @@ public class ObjectHolder <I, D, S> {
     public void setObjectD(D objectD) {
         this.objectD = objectD;
     }
+
     public S getObjectS() {
         return objectS;
     }
@@ -34,13 +35,13 @@ public class ObjectHolder <I, D, S> {
         this.objectS = objectS;
     }
 
-    public S sum (I varI, D varD) {
+    public S sum(I varI, D varD) {
         if (varI instanceof Integer && varD instanceof Double) {
             System.out.println("Numbers");
-            objectS = (S)String.valueOf((int)varI + (double)varD);
+            objectS = (S) String.valueOf((int) varI + (double) varD);
         } else if (varI instanceof String && varD instanceof String) {
             System.out.println("Strings");
-            objectS = (S)(varI.toString() + varD.toString());
+            objectS = (S) (varI.toString() + varD.toString());
         } else {
             System.out.println("return null");
             return null;

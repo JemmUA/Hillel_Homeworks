@@ -18,5 +18,5 @@ public class Account {
     @Column(name = "client_id")
     private Integer clientId;
     private String number;
-    private  double value;
+    private double value;
 }

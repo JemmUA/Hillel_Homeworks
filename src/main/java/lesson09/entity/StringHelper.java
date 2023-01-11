@@ -9,11 +9,11 @@ public class StringHelper {
 
         String stringFromArray = new String(arrayCharsIn);
 
-        if (stringIn.isBlank()){
+        if (stringIn.isBlank()) {
             System.out.println("Incoming string is blank. Transformation is canceled.");
             return null;
         }
-        if (stringFromArray.isBlank()){
+        if (stringFromArray.isBlank()) {
             System.out.println("Incoming string array is blank. Transformation is canceled.");
             return null;
         }
@@ -35,15 +35,15 @@ public class StringHelper {
         String stringSum = stringIn.concat(" ").concat(stringFromArray);
         System.out.println(String.format("Concat strings = %s", stringSum)); // no need to use 'format' here - just for demo and funny )
 
-        return cutMiddle(stringSum,1);
+        return cutMiddle(stringSum, 1);
     }
 
     private String cutMiddle(String string, int cutSize) {
 
-        if (string.length()/2 + string.length()%2 == cutSize)
+        if (string.length() / 2 + string.length() % 2 == cutSize)
             System.out.println("Warning! Cut=" + cutSize + " will remove whole string");
 
-        if (string.length()/2 + string.length()%2 < cutSize) {
+        if (string.length() / 2 + string.length() % 2 < cutSize) {
             System.out.println("cut=" + cutSize + " is too big");
             return string;
         }
@@ -51,9 +51,9 @@ public class StringHelper {
             System.out.println("cut=" + cutSize + " is too small");
             return string;
         }
-        cutSize = string.length()%2 == 1 ? --cutSize : cutSize;
-        String stringSum = string.substring(0,string.length()/2-cutSize) + string.substring((string.length()/2+cutSize+string.length()%2));
-        System.out.println(String.format("Cut out string with (cut = %d) is: \'%s\'", cutSize+string.length()%2, stringSum ));
+        cutSize = string.length() % 2 == 1 ? --cutSize : cutSize;
+        String stringSum = string.substring(0, string.length() / 2 - cutSize) + string.substring((string.length() / 2 + cutSize + string.length() % 2));
+        System.out.println(String.format("Cut out string with (cut = %d) is: \'%s\'", cutSize + string.length() % 2, stringSum));
         return stringSum;
     }
 }

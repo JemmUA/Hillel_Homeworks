@@ -17,9 +17,11 @@ public class User {
     //Constructors
     public User() {
     }
+
     public User(String name) {
         this.name = name;
     }
+
     public User(String name, String surName, String mail) {
         this.name = name;
         this.surName = surName;
@@ -35,53 +37,52 @@ public class User {
         this.country = country;
     }
 
+    public String getName() {
+        return name;
+    }
+
     //Methods
     //Setters and Getters
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setSurName(String surName) {
-        this.surName = surName;
-    }
-
-    public void setMail(String mail) {
-        this.mail = mail;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public String getName() {
-        return name;
-    }
-
     public String getSurName() {
         return surName;
+    }
+
+    public void setSurName(String surName) {
+        this.surName = surName;
     }
 
     public String getMail() {
         return mail;
     }
 
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
+
     public String getPassWord() {
         return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public String getCountry() {
         return country;
     }
 
-
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     public void read(String message) {
         System.out.println(message);
     }
+
     public void write() {
         System.out.println("please, type text:");
         Scanner typeScanner = new Scanner(System.in);
@@ -90,9 +91,10 @@ public class User {
 //        typeScanner.close();
         System.out.println("Typed: " + MainInheritance.stringForCheck);
     }
-    public String getClassShort (String classFull) {
+
+    public String getClassShort(String classFull) {
         String[] classWords = classFull.split("\\.");
-        return classWords[classWords.length-1];
+        return classWords[classWords.length - 1];
     }
 
 }

@@ -17,7 +17,7 @@ public class MainMultiThreadThree {
     public static void main(String[] args) throws InterruptedException {
         // 1.
         System.out.println("Atomic counter ---");
-        ExecutorService executorService =  Executors.newFixedThreadPool(2);
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
         executorService.execute(() -> {
             decrementAtomicCounter(counterAtomic);
             executorService.shutdown();
@@ -49,13 +49,13 @@ public class MainMultiThreadThree {
 
     }
 
-    public static synchronized AtomicInteger decrementAtomicCounter (AtomicInteger counterAtomic) {
+    public static synchronized AtomicInteger decrementAtomicCounter(AtomicInteger counterAtomic) {
         for (int i = 0; i < 10000; i++) {
             Thread thread = new Thread(() -> {
             });
             System.out.println("Atomic counter decreased by 1: " + counterAtomic.decrementAndGet());
         }
-     return counterAtomic;
+        return counterAtomic;
     }
 
     public static void lockPractice() throws InterruptedException {
@@ -63,7 +63,7 @@ public class MainMultiThreadThree {
         int delay = 500;
         Thread threadFirst = new Thread(new Runnable() {
             @Override
-            public void run () {
+            public void run() {
                 try {
                     year.winter(delay);
                     year.spring(delay);
@@ -73,10 +73,11 @@ public class MainMultiThreadThree {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-        }});
+            }
+        });
         Thread threadSecond = new Thread(new Runnable() {
             @Override
-            public void run () {
+            public void run() {
                 try {
                     year.winter(delay);
                     year.spring(delay);
@@ -86,10 +87,11 @@ public class MainMultiThreadThree {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-        }});
+            }
+        });
         Thread threadThird = new Thread(new Runnable() {
             @Override
-            public void run () {
+            public void run() {
                 try {
                     year.winter(delay);
                     year.spring(delay);
@@ -99,7 +101,8 @@ public class MainMultiThreadThree {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-        }});
+            }
+        });
 
         threadFirst.start();
         threadSecond.start();

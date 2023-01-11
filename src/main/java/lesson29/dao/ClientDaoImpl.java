@@ -5,12 +5,11 @@ import lesson29.util.HibernateConfiguration;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
 import java.util.List;
 
-public class ClientDaoImpl implements ClientDao{
+public class ClientDaoImpl implements ClientDao {
     @Override
     public List<Client> getAll() {
         SessionFactory sessionFactory = HibernateConfiguration.getSessionFactory();

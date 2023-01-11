@@ -4,7 +4,7 @@ import lesson21.service.Counter;
 
 import java.util.concurrent.Callable;
 
-public class CallableThread implements Callable <String> {
+public class CallableThread implements Callable<String> {
     @Override
     public String call() {
         System.out.println("Callable thread: " + Thread.currentThread().getName());

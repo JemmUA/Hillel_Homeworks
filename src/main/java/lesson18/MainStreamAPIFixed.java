@@ -23,7 +23,8 @@ public class MainStreamAPIFixed {
         taskHeader(2);
         ArrayList<Integer> randoms = new ArrayList<>();
         int range = 200;
-        for (int i = 0 ; i < 20 ; i++) randoms.add((int)((Math.random() * range)-range/2)); // 20 integers in range -100 : 99
+        for (int i = 0; i < 20; i++)
+            randoms.add((int) ((Math.random() * range) - range / 2)); // 20 integers in range -100 : 99
         System.out.println("Collection 'randoms' of random Integers: " + randoms);
         Stream<Integer> integerStream = randoms.stream();
         List<Integer> oddNumbers = integerStream
@@ -33,7 +34,7 @@ public class MainStreamAPIFixed {
         System.out.println("Sorted list of odd Integers from 'randoms': " + oddNumbers);
 
         taskHeader(3);
-        HashSet <String> stringHeshSet = new HashSet<>(Arrays.asList("Нобор ", "данных ", "- ", "это  ", "SET ", "! ", " :D "));
+        HashSet<String> stringHeshSet = new HashSet<>(Arrays.asList("Нобор ", "данных ", "- ", "это  ", "SET ", "! ", " :D "));
         Stream<String> stringStream = stringHeshSet.stream();
         List<String> stringList = stringStream
                 .toList();
@@ -50,7 +51,7 @@ public class MainStreamAPIFixed {
         taskHeader(4);
         System.out.println("MORSE CODE");
         final String[][] morseArray = {
-                {"A", ".-  "}, {"B", "-..."}, {"C", "-.-."}, {"D", "-.. "}, {"E", "."   }, {"F", "..-."},
+                {"A", ".-  "}, {"B", "-..."}, {"C", "-.-."}, {"D", "-.. "}, {"E", "."}, {"F", "..-."},
                 {"G", "--. "}, {"H", "...."}, {"I", "..  "}, {"J", ".---"}, {"K", "-.- "}, {"L", ".-.."},
                 {"M", "--  "}, {"N", "-.  "}, {"O", "--- "}, {"P", ".--."}, {"Q", "--.-"}, {"R", ".-. "},
                 {"S", "... "}, {"T", "-   "}, {"U", "..- "}, {"V", "...-"}, {"W", ".-- "}, {"X", "-..-"},
@@ -60,9 +61,9 @@ public class MainStreamAPIFixed {
         Collection<String> valuesList = morseMap.values();
 //        System.out.println(valuesList);
         Stream<String> keyStream = valuesList.stream();
-                keyStream
-                        .peek(System.out::println)
-                        .toList();
+        keyStream
+                .peek(System.out::println)
+                .toList();
 
 
 //        taskHeader(4); // old
@@ -100,13 +101,13 @@ public class MainStreamAPIFixed {
         Stream<String> numbersStream = numbers.stream();
         List<Integer> integers =
                 numbersStream
-                .skip(1)
-                .limit(8)
-                .map(Integer::valueOf)
+                        .skip(1)
+                        .limit(8)
+                        .map(Integer::valueOf)
 //                .mapToInt(numberStr -> Integer.valueOf(numberStr))
-                .filter(number -> number % 2 == 0)
-                .distinct()
-                .collect(toList());
+                        .filter(number -> number % 2 == 0)
+                        .distinct()
+                        .collect(toList());
         System.out.println("are: " + integers);
 
 
@@ -145,7 +146,7 @@ public class MainStreamAPIFixed {
     /**
      * @param task
      */
-    public static void taskHeader (Integer task){
+    public static void taskHeader(Integer task) {
         String upperline = "\n";
         String underline = "\n------\n";
         System.out.printf(String.format("%sTask %d %s", upperline, task, underline));

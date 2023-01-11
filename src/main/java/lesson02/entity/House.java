@@ -4,7 +4,7 @@ public class House {
     // Data
     private House house;
     private String name;
-    private boolean doorIsLocked ;
+    private boolean doorIsLocked;
     private boolean lightIsON;
     private double temperature;
     private Human masterHuman;
@@ -13,16 +13,18 @@ public class House {
     private HomeHelper homehelperOne;
 
     // Constructors
-    public  House() {
+    public House() {
         this.name = "";
         this.doorIsLocked = true;
         this.lightIsON = false;
         this.temperature = 18;
-        masterHuman = new Human("Master", 55 , "man", 187.5, 99, false, 'A', 3, 100, 5);
+        masterHuman = new Human("Master", 55, "man", 187.5, 99, false, 'A', 3, 100, 5);
         samsungTV = new TVset(false, 3, 15);
         zanussi = new WashingMachine();
-        homehelperOne = new HomeHelper("R2D2", false);    Human masterHuman = new Human("Master", 55 , "man", 187.5, 99, false, 'A', 3, 100, 5);
+        homehelperOne = new HomeHelper("R2D2", false);
+        Human masterHuman = new Human("Master", 55, "man", 187.5, 99, false, 'A', 3, 100, 5);
     }
+
     public House(String name, boolean doorIsLocked, boolean lightIsON, double temperature) {
         this.name = name;
         this.doorIsLocked = doorIsLocked;
@@ -41,15 +43,19 @@ public class House {
         this.homehelperOne = homehelperOne;
     }
 
-
-
-//Methods
-    public void setName(String name) {
-        this.name = name;
-    }
     public String getName() {
         return name;
     }
+
+    //Methods
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean getLightIsON() {
+        return lightIsON;
+    }
+
     public void setLightIsON(boolean lightIsON) {
         this.lightIsON = lightIsON;
         if (lightIsON == true) {
@@ -59,9 +65,11 @@ public class House {
         }
 
     }
-    public boolean getLightIsON() {
-        return lightIsON;
+
+    public boolean getDoorIsLocked() {
+        return doorIsLocked;
     }
+
     public void setDoorIsLocked(boolean doorIsLocked) {
         this.doorIsLocked = doorIsLocked;
         if (doorIsLocked == true) {
@@ -71,54 +79,52 @@ public class House {
         }
     }
 
-    public boolean getDoorIsLocked() {
-        return doorIsLocked;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = (double)temperature;
-        System.out.println("Current temperature is: " + (int)temperature + "°C, enjoy");
-    }
     public double getTemperature() {
-        System.out.println("Current temperature is: " + (int)temperature + "°C, enjoy");
+        System.out.println("Current temperature is: " + (int) temperature + "°C, enjoy");
         return temperature;
     }
 
-    public void setMasterHuman(Human masterHuman) {
-        this.masterHuman = masterHuman;
-    }
-
-    public void setSamsungTV(TVset samsungTV) {
-        this.samsungTV = samsungTV;
-    }
-
-    public void setZanussi(WashingMachine zanussi) {
-        this.zanussi = zanussi;
-    }
-
-    public void setHomehelperOne(HomeHelper homehelperOne) {
-        this.homehelperOne = homehelperOne;
+    public void setTemperature(int temperature) {
+        this.temperature = (double) temperature;
+        System.out.println("Current temperature is: " + (int) temperature + "°C, enjoy");
     }
 
     public Human getMasterHuman() {
         return masterHuman;
     }
 
+    public void setMasterHuman(Human masterHuman) {
+        this.masterHuman = masterHuman;
+    }
+
     public TVset getSamsungTV() {
         return samsungTV;
+    }
+
+    public void setSamsungTV(TVset samsungTV) {
+        this.samsungTV = samsungTV;
     }
 
     public WashingMachine getZanussi() {
         return zanussi;
     }
 
+    public void setZanussi(WashingMachine zanussi) {
+        this.zanussi = zanussi;
+    }
+
     public HomeHelper getHomehelperOne() {
         return homehelperOne;
+    }
+
+    public void setHomehelperOne(HomeHelper homehelperOne) {
+        this.homehelperOne = homehelperOne;
     }
 
     public void sayHuman(String speech) {
         masterHuman.say(speech);
     }
+
     public String getHelperName() {
         return homehelperOne.getName();
     }

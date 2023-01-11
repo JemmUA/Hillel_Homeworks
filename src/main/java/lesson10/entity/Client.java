@@ -6,6 +6,16 @@ public class Client {
     private String clientAccountID;
     private double sum;
 
+    public Client() {
+    }
+
+    public Client(String clientID, String surname, String clientAccountID, double sum) {
+        this.clientID = clientID;
+        this.surname = surname;
+        this.clientAccountID = clientAccountID;
+        this.sum = sum;
+    }
+
     public String getClientID() {
         return clientID;
     }
@@ -35,16 +45,6 @@ public class Client {
     }
 
     public void setSum(double sum) {
-        this.sum = sum;
-    }
-
-    public Client() {
-    }
-
-    public Client(String clientID, String surname, String clientAccountID, double sum) {
-        this.clientID = clientID;
-        this.surname = surname;
-        this.clientAccountID = clientAccountID;
         this.sum = sum;
     }
 }

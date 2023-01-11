@@ -11,8 +11,6 @@ public class MainAccess {
     public static void main(String[] args) {
 
 
-
-
         String hwTitle =
                 "HOMEWORK 09 for lesson11\n" +
                         "Introduction to I/O. Work with files. The NIO package.\n" +
@@ -43,10 +41,10 @@ public class MainAccess {
         //check and create folders: log, poetry, users
         fileWorkshop.checkCreatePath(logFilePath + logFileName);
         fileWorkshop.checkCreatePath(quatrainFilePath + quatrainFileName);
-        fileWorkshop.checkCreatePath(userFilePath+userFileName);
+        fileWorkshop.checkCreatePath(userFilePath + userFileName);
 
         //Open homework log session
-        fileWorkshop.writeLogRemark(logFilePath, logFileName, "Start HOMEWORK #09 - ".concat(currentDateTime)  , '=', '=', true, false);
+        fileWorkshop.writeLogRemark(logFilePath, logFileName, "Start HOMEWORK #09 - ".concat(currentDateTime), '=', '=', true, false);
 
         // 1.
         quatrain(quatrain, currentDateTime, fileWorkshop, quatrainFilePath, quatrainFileName, logFilePath, logFileName);
@@ -56,8 +54,10 @@ public class MainAccess {
         System.out.println("\n--------- GET ACCESS --------\n! For instant EXIT - type Q !");
 
         do {
-            if (user.getStatus().equals("authorize")) accountWorkshop.authorization(user, fileWorkshop, userFilePath, userFileName, logFilePath, logFileName);
-            if (user.getStatus().equals("register")) accountWorkshop.registration(user, fileWorkshop, matchString, userFilePath, userFileName, logFilePath, logFileName);
+            if (user.getStatus().equals("authorize"))
+                accountWorkshop.authorization(user, fileWorkshop, userFilePath, userFileName, logFilePath, logFileName);
+            if (user.getStatus().equals("register"))
+                accountWorkshop.registration(user, fileWorkshop, matchString, userFilePath, userFileName, logFilePath, logFileName);
         } while ((!user.getStatus().equals("work")) && !(user.getStatus().equals("exit")));
 
         if (user.getStatus().equals("work")) {
@@ -71,7 +71,7 @@ public class MainAccess {
             System.out.println("================");
         }
 
-        fileWorkshop.writeLogRemark(logFilePath, logFileName, "End HOMEWORK #09 - ".concat(currentDateTime)  , '=', '=', true, false);
+        fileWorkshop.writeLogRemark(logFilePath, logFileName, "End HOMEWORK #09 - ".concat(currentDateTime), '=', '=', true, false);
 
     }
 

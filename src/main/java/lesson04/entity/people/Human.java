@@ -5,7 +5,7 @@ import lesson04.entity.skills.JobSatisfaction;
 
 public abstract class Human implements Diagnostics, JobSatisfaction {
     //Data
-    String name ;
+    String name;
     String surName;
     int age;
     String sex;
@@ -66,13 +66,15 @@ public abstract class Human implements Diagnostics, JobSatisfaction {
 
     //Skills
     public void say(String speech) {
-        System.out.println(this.getClassShort(this.getClass().getName()) + " "   + name + " said: " + speech);
+        System.out.println(this.getClassShort(this.getClass().getName()) + " " + name + " said: " + speech);
     }
+
     public void walk(int distance) {
         System.out.println(this.getClassShort(this.getClass().getName()) + name + " walked " + distance + " m");
     }
-    public String getClassShort (String classFull) {
+
+    public String getClassShort(String classFull) {
         String[] classWords = classFull.split("\\.");
-        return classWords[classWords.length-1];
+        return classWords[classWords.length - 1];
     }
-    }
+}

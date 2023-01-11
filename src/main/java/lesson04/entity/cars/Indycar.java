@@ -28,6 +28,7 @@ public final class Indycar extends RaceCar {
     public void setTC(int TC) {
         this.TC = TC;
     }
+
     //Skills
     public void plusTC() {
         TC++;
@@ -44,12 +45,13 @@ public final class Indycar extends RaceCar {
     //Implementing interfaces
 
     @Override
-    public void makeDiagnostic(){
-        System.out.println(getModelAndNumber(" - ") + "performed full diagnostic." );
+    public void makeDiagnostic() {
+        System.out.println(getModelAndNumber(" - ") + "performed full diagnostic.");
     }
+
     @Override
     public void makeReport() {
-        System.out.println(getModelAndNumber(" - ") + "The report has been created." );
+        System.out.println(getModelAndNumber(" - ") + "The report has been created.");
     }
 
 
@@ -58,28 +60,31 @@ public final class Indycar extends RaceCar {
         System.out.println(getModelAndNumber(" - ") + "engine changed.");
 
     }
+
     @Override
-    public void changeWings(String wingFrontRear){
+    public void changeWings(String wingFrontRear) {
         //front, rear
-        System.out.println(getModelAndNumber(" - ") + wingFrontRear +" wing changed.");
+        System.out.println(getModelAndNumber(" - ") + wingFrontRear + " wing changed.");
     }
+
     @Override
-    public void changeGearbox(){
+    public void changeGearbox() {
         System.out.println(getModelAndNumber(" - ") + "gearbox changed.");
     }
+
     @Override
-    public void changeChassis(){
+    public void changeChassis() {
         System.out.println(getModelAndNumber(" - ") + "chassis changed.");
     }
 
     @Override
-    public void setNewTyres(String tyresType){
+    public void setNewTyres(String tyresType) {
         //slick, wet, intermediate
-        System.out.println(getModelAndNumber(" - ") + tyresType +"tyres set.");
+        System.out.println(getModelAndNumber(" - ") + tyresType + "tyres set.");
     }
 
     @Override
-    public void setUp(){
+    public void setUp() {
         System.out.println(getModelAndNumber(" - ") + "Car setup performed.");
     }
 

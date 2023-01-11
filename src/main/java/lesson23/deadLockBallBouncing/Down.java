@@ -10,10 +10,12 @@ public class Down {
     public void setUp(Up up) {
         this.up = up;
     }
-    public synchronized String move () {
+
+    public synchronized String move() {
         return "The ball falls down";
     }
-    public synchronized String moveUp (Up up){
+
+    public synchronized String moveUp(Up up) {
         return up.move();
     }
 }

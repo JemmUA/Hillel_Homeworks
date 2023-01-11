@@ -19,7 +19,7 @@ public class MainEncapsulation {
         Human hum1 = new Human();
         Human hum2 = new Human("Andrey", 22, "men", 190, 88);
         Human hum3 = new Human("Andrey", 22, "men", 190, 88,
-                true, 'A', 1, 101,1);
+                true, 'A', 1, 101, 1);
         System.out.println(hum3.getName() + ", " + hum3.getSex() + ", blood group:" + hum3.getBloodGroup());
         System.out.println();
 
@@ -29,12 +29,13 @@ public class MainEncapsulation {
         ps: Задание с подвохом. Если что-то заметили, закомментируйте эту часть кода и напишите комментарий.
 
         Class FinalArgs
-*/      System.out.println("2.");
+*/
+        System.out.println("2.");
         FinalArgs af = new FinalArgs();
-        FinalArgs afa = new FinalArgs(1,2,3);
-        System.out.println("af.x="+af.getX()+", af.y="+ af.getY()+", af.z="+af.getZ()); // right
+        FinalArgs afa = new FinalArgs(1, 2, 3);
+        System.out.println("af.x=" + af.getX() + ", af.y=" + af.getY() + ", af.z=" + af.getZ()); // right
         // System.out.println("af.x="+af.x+", af.y="+ af.y+", af.z="+af.z); // wrong
-        System.out.println("get af x: "+afa.getX()+", get af y: "+afa.getY()+", get af z: "+afa.getZ());
+        System.out.println("get af x: " + afa.getX() + ", get af y: " + afa.getY() + ", get af z: " + afa.getZ());
         System.out.println();
 
 /*      3. Создайте класс House. Заполните Ваш новый дом “мебелью”(подсказка: мебель - это отдельные классы,
@@ -64,8 +65,8 @@ public class MainEncapsulation {
 //        homehelperOne.say("Good night");
 
 
-        House myFlatOne = new House("City flat", true, false, 24,new Human("Master"),
-                new TVset(false, 0, 0), new WashingMachine(), new HomeHelper( "C-3PO",true));
+        House myFlatOne = new House("City flat", true, false, 24, new Human("Master"),
+                new TVset(false, 0, 0), new WashingMachine(), new HomeHelper("C-3PO", true));
         Human masterHuman = new Human();
         House myFlat = new House("myFlat", true, false, 21);
         TVset samsungTV = new TVset(false, 3, 15);

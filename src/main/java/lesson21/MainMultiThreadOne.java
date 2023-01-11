@@ -12,7 +12,7 @@ public class MainMultiThreadOne {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 //        System.out.println(Thread.currentThread().getName());
 
-        CustomThread threadCustom= new CustomThread();
+        CustomThread threadCustom = new CustomThread();
         threadCustom.setName("Custom");
 //        threadCustom.start();
 

@@ -6,8 +6,8 @@ import java.util.HashSet;
 
 public class Information {
 
-    private ArrayList<String> nicksList = new ArrayList <>();
-    private HashSet<String> mailsList = new HashSet <>();
+    private ArrayList<String> nicksList = new ArrayList<>();
+    private HashSet<String> mailsList = new HashSet<>();
     private HashMap<String, String> mailNickMap = new HashMap<>();
 
 

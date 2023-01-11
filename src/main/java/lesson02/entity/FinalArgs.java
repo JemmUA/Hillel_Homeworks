@@ -7,7 +7,7 @@ final public class FinalArgs {
 
 
     // Constructors
-    public FinalArgs () {
+    public FinalArgs() {
         x = 10;
         y = 20;
         z = 30;
@@ -33,9 +33,11 @@ final public class FinalArgs {
     public int getX() {
         return x;
     }
+
     public int getY() {
         return y;
     }
+
     public int getZ() {
         return z;
     }

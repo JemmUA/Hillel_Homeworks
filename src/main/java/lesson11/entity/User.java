@@ -1,7 +1,7 @@
 package lesson11.entity;
 
 public class User {
-//    private String name;
+    //    private String name;
 //    private String surName;
     private String login;
     private String password;
@@ -42,8 +42,19 @@ public class User {
         this.status = status;
     }
 
-    public void setStatusAuthorize() { status = "authorize"; }
-    public void setStatusRegister() { status = "register"; }
-    public void setStatusWork() { status = "work"; }
-    public void setStatusExit() { status = "exit"; }
+    public void setStatusAuthorize() {
+        status = "authorize";
+    }
+
+    public void setStatusRegister() {
+        status = "register";
+    }
+
+    public void setStatusWork() {
+        status = "work";
+    }
+
+    public void setStatusExit() {
+        status = "exit";
+    }
 }

@@ -10,10 +10,12 @@ public class Up {
     public void setDown(Down down) {
         this.down = down;
     }
-    public synchronized String move () {
+
+    public synchronized String move() {
         return "The ball jumps up";
     }
-    public synchronized String moveDown (Down down){
+
+    public synchronized String moveDown(Down down) {
         try {
             Thread.sleep(11);
         } catch (InterruptedException e) {

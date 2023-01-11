@@ -34,7 +34,8 @@ public class ClientStatusService {
         }
         return clientsStatuses;
     }
-    public void save (ClientStatus clientStatus){
+
+    public void save(ClientStatus clientStatus) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_SAVE)) {
             connection.setAutoCommit(false);
@@ -46,7 +47,8 @@ public class ClientStatusService {
             e.printStackTrace();
         }
     }
-    public void updateStatusIdByClientIdAndStatusId (int newStatus, int clientId, int statusId){
+
+    public void updateStatusIdByClientIdAndStatusId(int newStatus, int clientId, int statusId) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_UPDATE_STATUSID_BY_CLIENTID_AND_STATUSID)) {
             connection.setAutoCommit(false);
@@ -60,7 +62,7 @@ public class ClientStatusService {
         }
     }
 
-    public void deleteByClientId (int clientId){
+    public void deleteByClientId(int clientId) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE_BY_CLIENTID)) {
             connection.setAutoCommit(false);
@@ -71,7 +73,8 @@ public class ClientStatusService {
             e.printStackTrace();
         }
     }
-    public void deleteByStatusId (int statusId){
+
+    public void deleteByStatusId(int statusId) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE_BY_STATUSID)) {
             connection.setAutoCommit(false);

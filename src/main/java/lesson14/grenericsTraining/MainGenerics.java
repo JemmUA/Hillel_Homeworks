@@ -21,13 +21,12 @@ public class MainGenerics {
 
 
         System.out.println("--------------");
-        System.out.println(diffHolder.sum(1,2.555555));
+        System.out.println(diffHolder.sum(1, 2.555555));
         System.out.println("--------------");
-        System.out.println(stringHolder.sum("Lets learn ","step by step"));
+        System.out.println(stringHolder.sum("Lets learn ", "step by step"));
         System.out.println("--------------");
-        System.out.println(stringHolder.sum("Lets learn ",null));
-        System.out.println(diffHolder.sum(1,null));
-
+        System.out.println(stringHolder.sum("Lets learn ", null));
+        System.out.println(diffHolder.sum(1, null));
 
 
     }

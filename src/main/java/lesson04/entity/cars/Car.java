@@ -17,6 +17,7 @@ public abstract class Car implements Diagnostics, PreparingForRace {
     //Constructors
     public Car() {
     }
+
     public Car(String model, String color, float engineVolume, int weight, int fuelTank, float fuelConsumption, double fuelLevel, int maxSpeed) {
         this.model = model;
         this.color = color;
@@ -98,11 +99,11 @@ public abstract class Car implements Diagnostics, PreparingForRace {
     public void drive(float distance) {
         System.out.println("\nDriving\n----------");
 
-        if (fuelLevel >= distance/fuelConsumption) {
-            fuelLevel -= distance/fuelConsumption;
+        if (fuelLevel >= distance / fuelConsumption) {
+            fuelLevel -= distance / fuelConsumption;
             System.out.println(model + " traveled " + distance + " km");
         } else {
-            distance = (float)fuelLevel*fuelConsumption;
+            distance = (float) fuelLevel * fuelConsumption;
             fuelLevel = 0;
             System.out.println(model + " traveled " + distance + " km and stopped. \nFuel tank is empty. Need refuel!");
         }
@@ -110,18 +111,18 @@ public abstract class Car implements Diagnostics, PreparingForRace {
 
     public void refuel(int addFuel) {
         System.out.print("Refueling: ");
-            if (addFuel < 0) {
-                System.out.println("You can't remove fuel!");
+        if (addFuel < 0) {
+            System.out.println("You can't remove fuel!");
+        } else {
+            if (addFuel + fuelLevel <= fuelTank) {
+                fuelLevel += addFuel;
+                System.out.println("added " + addFuel + " L. Level of fuel: " + fuelLevel + " L");
             } else {
-                if (addFuel + fuelLevel <= fuelTank) {
-                    fuelLevel += addFuel;
-                    System.out.println("added " + addFuel + " L. Level of fuel: " + fuelLevel + " L");
-                } else {
-                    System.out.println("fuel added " + (fuelTank - fuelLevel)  + " L. Fueltank is full: " + fuelTank + " L");
-                    fuelLevel = fuelTank;
-                }
+                System.out.println("fuel added " + (fuelTank - fuelLevel) + " L. Fueltank is full: " + fuelTank + " L");
+                fuelLevel = fuelTank;
             }
         }
+    }
 
 
 }

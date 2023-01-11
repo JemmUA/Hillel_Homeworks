@@ -78,11 +78,11 @@ public class mainJDBC {
         clientStatusService.deleteByStatusId(1);
 
         //update
-        accountService.updateClientIdById(1111,3);
+        accountService.updateClientIdById(1111, 3);
 
         clientService.updateNameById("Billy", 12);
 
-        clientStatusService.updateStatusIdByClientIdAndStatusId(3, 10,1);
+        clientStatusService.updateStatusIdByClientIdAndStatusId(3, 10, 1);
 
         statusService.updateDescriptionByAlias("Advanced rights", "VIP");
         statusService.updateDescriptionByAlias("Wide rights", "PREMIUM");
@@ -93,7 +93,7 @@ public class mainJDBC {
         Client client = new Client();
 //        System.out.println(clientService.getByPhone(380968568843L));
         client = clientService.getByPhone(380675267512L);
-        System.out.println("Client " + client.getName() +" has found by number: " + client.getPhone());
+        System.out.println("Client " + client.getName() + " has found by number: " + client.getPhone());
 
         System.out.println("Task #5");
         List<Account> accounts = accountService.getLongerNumber(7);
@@ -107,16 +107,16 @@ public class mainJDBC {
 
         //Here doing something to get ages ))
 //        clientService.addColumnAge();
-        clientService.setAge(22,1);
-        clientService.setAge(11,2);
-        clientService.setAge(7,3);
-        clientService.setAge(34,4);
-        clientService.setAge(24,5);
-        clientService.setAge(43,6);
-        clientService.setAge(22,7);
-        clientService.setAge(11,8);
-        clientService.setAge(8,9);
-        clientService.setAge(32,10);
+        clientService.setAge(22, 1);
+        clientService.setAge(11, 2);
+        clientService.setAge(7, 3);
+        clientService.setAge(34, 4);
+        clientService.setAge(24, 5);
+        clientService.setAge(43, 6);
+        clientService.setAge(22, 7);
+        clientService.setAge(11, 8);
+        clientService.setAge(8, 9);
+        clientService.setAge(32, 10);
 
         //join tables
         System.out.println("Data from joined tables");
@@ -124,7 +124,7 @@ public class mainJDBC {
         List clientsJoined = clientService.joinTables();
         for (int i = 0; i < clientsJoined.size(); i++) {
             String[] splitStr = clientsJoined.get(i).toString().split(", ");
-            System.out.println(splitStr[1] + ", " + splitStr[3] + ", " + splitStr[5]) ;
+            System.out.println(splitStr[1] + ", " + splitStr[3] + ", " + splitStr[5]);
         }
     }
 }

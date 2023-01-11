@@ -9,25 +9,30 @@ public class HomeHelper {
         name = "";
         power = false;
     }
+
     public HomeHelper(String name, boolean power) {
         this.name = name;
         this.power = power;
+    }
+
+    public String getName() {
+        return name;
     }
 
     //Methods
     public void setName(String name) {
         this.name = name;
     }
-    public String getName() {
-        return name;
+
+    public boolean getPower() {
+        return power;
     }
+
     public void setPower(boolean power) {
         this.power = power;
         System.out.println(name + ": Home Helper - power is " + power);
     }
-    public boolean getPower() {
-        return power;
-    }
+
     public void masterCame(House myFlat, TVset samsungTV, WashingMachine zanussi) {
         myFlat.setDoorIsLocked(false);
         myFlat.setLightIsON(true);
@@ -41,11 +46,11 @@ public class HomeHelper {
         zanussi.setPower(false);
     }
 
-        public void masterGoSleep(House myFlat, TVset samsungTV) {
-            myFlat.setDoorIsLocked(true);
-            myFlat.setTemperature(18);
-            samsungTV.setVolume(3);
-            myFlat.setLightIsON(false);
+    public void masterGoSleep(House myFlat, TVset samsungTV) {
+        myFlat.setDoorIsLocked(true);
+        myFlat.setTemperature(18);
+        samsungTV.setVolume(3);
+        myFlat.setLightIsON(false);
     }
 
 

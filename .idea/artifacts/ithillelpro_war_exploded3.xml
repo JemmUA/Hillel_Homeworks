@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="ithillelpro:war exploded3">
+    <output-path>$PROJECT_DIR$/out/artifacts/ithillelpro_war_exploded3</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ithillelpro" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="ithillelpro/web/Web" />
+    </root>
+  </artifact>
+</component>

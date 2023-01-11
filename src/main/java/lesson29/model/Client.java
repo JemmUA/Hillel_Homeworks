@@ -7,15 +7,15 @@ import lombok.ToString;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "clients")
+@Table(name = "clients")
 @Getter
 @Setter
 @ToString
 @NamedNativeQueries({
-        @NamedNativeQuery( name = "getAll", query = "select * from Clients", resultClass = Client.class),
-        @NamedNativeQuery( name = "getByName", query = "select * from Clients WHERE name = :name", resultClass = Client.class),
-        @NamedNativeQuery( name = "getByPhone", query = "select * from Clients WHERE phone = :phone", resultClass = Client.class),
-        @NamedNativeQuery( name = "getByAge", query = "select * from Clients WHERE age = :age", resultClass = Client.class)
+        @NamedNativeQuery(name = "getAll", query = "select * from Clients", resultClass = Client.class),
+        @NamedNativeQuery(name = "getByName", query = "select * from Clients WHERE name = :name", resultClass = Client.class),
+        @NamedNativeQuery(name = "getByPhone", query = "select * from Clients WHERE phone = :phone", resultClass = Client.class),
+        @NamedNativeQuery(name = "getByAge", query = "select * from Clients WHERE age = :age", resultClass = Client.class)
 })
 public class Client {
     @Id

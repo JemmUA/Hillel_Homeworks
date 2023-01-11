@@ -6,9 +6,11 @@ public class Admin extends Support {
 
     public Admin() {
     }
+
     public Admin(String name, String surName, String mail, String passWord, String sex, String country) {
         super(name, surName, mail, passWord, sex, country);
-        }
+    }
+
     public void clearIfWrong(boolean booleanData) {
         if (booleanData == true) {
             System.out.println("Quatrain deleted");

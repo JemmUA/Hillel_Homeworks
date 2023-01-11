@@ -6,16 +6,21 @@ public class WashingMachine {
 
     // Constructors
     public WashingMachine() {
-    power = false;
-    modesArray = new String[4];
-    modesArray[0] = "Short Mode";
-    modesArray[1] = "Long Mode";
-    modesArray[2] = "Soft Mode";
-    modesArray[3] = "Bavovna";
+        power = false;
+        modesArray = new String[4];
+        modesArray[0] = "Short Mode";
+        modesArray[1] = "Long Mode";
+        modesArray[2] = "Soft Mode";
+        modesArray[3] = "Bavovna";
     }
+
     public WashingMachine(boolean power, String[] modesArray) {
         this.power = power;
         this.modesArray = modesArray;
+    }
+
+    public boolean getPower() {
+        return power;
     }
 
     // Methods
@@ -23,17 +28,17 @@ public class WashingMachine {
         this.power = power;
         System.out.println("Washing Machine: power is: " + power);
     }
-    public boolean getPower() {
-        return power;
-    }
-    public void setModesArray(String[] modesArray) {
-        this.modesArray = modesArray;
-    }
+
     public String[] getModesArray() {
         return modesArray;
     }
-    public void performWashing (int mode){
-        switch (mode){
+
+    public void setModesArray(String[] modesArray) {
+        this.modesArray = modesArray;
+    }
+
+    public void performWashing(int mode) {
+        switch (mode) {
             case 1:
                 System.out.println("Washing Machine: Performed mode \"" + modesArray[0] + "\". All is clean");
                 break;
@@ -47,9 +52,9 @@ public class WashingMachine {
                 System.out.println("Washing Machine: Performed mode \"" + modesArray[3] + "\". All is clean. Glory to Ukraine!");
                 break;
             default:
-                System.out.println("Washing Machine: Wrong mode "+ mode + ". Performing canceled.");
+                System.out.println("Washing Machine: Wrong mode " + mode + ". Performing canceled.");
 
         }
 
-        }
+    }
 }

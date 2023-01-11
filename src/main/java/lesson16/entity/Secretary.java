@@ -22,14 +22,15 @@ public class Secretary implements Printer, Email {
     }
 
     @Override
-    public void requestReport(String speaker){
+    public void requestReport(String speaker) {
         System.out.println("All employees! Please send a report on the work done to my e-mail or messenger. " + speaker + ".");
     }
 
-    public void sayHello(String speaker){
+    public void sayHello(String speaker) {
         System.out.println("Greetings, everybody! " + speaker + ".");
     }
-    public void sayGoodbye(String speaker){
+
+    public void sayGoodbye(String speaker) {
         System.out.println("The working day is over. Goodbye. " + speaker + ".");
     }
 

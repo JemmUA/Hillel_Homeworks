@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StatusService{
+public class StatusService {
     private String QUERY_GET_ALL = "SELECT * FROM statuses";
     private String QUERY_SAVE = "INSERT INTO statuses(alias, description) VALUES (?, ?)";
     private String QUERY_UPDATE_DESCRIPTION_BY_ALIAS = "UPDATE statuses SET description = ? WHERE alias = ?";
@@ -34,7 +34,7 @@ public class StatusService{
         return statuses;
     }
 
-    public void save (Status status){
+    public void save(Status status) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_SAVE)) {
             connection.setAutoCommit(false);
@@ -47,7 +47,7 @@ public class StatusService{
         }
     }
 
-    public void deleteById (Status status, int id){
+    public void deleteById(Status status, int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE_BY_ID)) {
             connection.setAutoCommit(false);
@@ -59,7 +59,7 @@ public class StatusService{
         }
     }
 
-    public void updateDescriptionByAlias (String description, String alias){
+    public void updateDescriptionByAlias(String description, String alias) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_UPDATE_DESCRIPTION_BY_ALIAS)) {
             connection.setAutoCommit(false);
@@ -72,7 +72,7 @@ public class StatusService{
         }
     }
 
-    public void deleteById (int id){
+    public void deleteById(int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE_BY_ID)) {
             connection.setAutoCommit(false);

@@ -13,11 +13,11 @@ public class ClientService {
     private String QUERY_UPDATE_NAME_BY_ID = "UPDATE clients SET name = ? WHERE id = ?";
     private String QUERY_DELETE_BY_ID = "DELETE FROM clients WHERE id = ?";
     private String QUERY_GET_BY_PHONE = "SELECT * FROM clients WHERE phone = ?";
-    private String QUERY_GET_ID_EQUAL_TO_ACCOUNTID  =
+    private String QUERY_GET_ID_EQUAL_TO_ACCOUNTID =
             "select clients.id, clients.name, clients.email, clients.phone, clients.about, clients.age from clients, accounts where clients.id = accounts.client_id";
-    private String QUERY_JOIN_TABLES  = "select c.name, c.email, s.alias from clients as c inner join client_status as cs on c.id = cs.client_id inner join statuses as s on s.id = cs.status_id where c.age > 18;";
-    private String QUERY_ADD_COLUMN_AGE  = "ALTER TABLE clients ADD age int ";
-    private String QUERY_FILL_COLUMN_AGE  = "UPDATE clients SET age = ? WHERE id = ?";
+    private String QUERY_JOIN_TABLES = "select c.name, c.email, s.alias from clients as c inner join client_status as cs on c.id = cs.client_id inner join statuses as s on s.id = cs.status_id where c.age > 18;";
+    private String QUERY_ADD_COLUMN_AGE = "ALTER TABLE clients ADD age int ";
+    private String QUERY_FILL_COLUMN_AGE = "UPDATE clients SET age = ? WHERE id = ?";
 
     public List<Client> getAll() {
         List<Client> clients = new ArrayList<>();
@@ -42,7 +42,8 @@ public class ClientService {
         }
         return clients;
     }
-    public void save (Client client){
+
+    public void save(Client client) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_SAVE)) {
             connection.setAutoCommit(false);
@@ -57,7 +58,8 @@ public class ClientService {
             e.printStackTrace();
         }
     }
-    public void updateNameById (String name, int id){
+
+    public void updateNameById(String name, int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_UPDATE_NAME_BY_ID)) {
             connection.setAutoCommit(false);
@@ -69,7 +71,8 @@ public class ClientService {
             e.printStackTrace();
         }
     }
-    public void deleteById (int id){
+
+    public void deleteById(int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE_BY_ID)) {
             connection.setAutoCommit(false);
@@ -80,6 +83,7 @@ public class ClientService {
             e.printStackTrace();
         }
     }
+
     public Client getByPhone(long phone) {
         Client client = new Client();
         try (Connection connection = Database.getConnection();
@@ -99,7 +103,7 @@ public class ClientService {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    return client;
+        return client;
     }
 
     public List<Client> getIdEqualAccountId() {
@@ -147,7 +151,7 @@ public class ClientService {
         return clients;
     }
 
-    public void addColumnAge (){
+    public void addColumnAge() {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_ADD_COLUMN_AGE)) {
             connection.setAutoCommit(false);
@@ -158,7 +162,8 @@ public class ClientService {
             e.printStackTrace();
         }
     }
-    public void setAge (int age, int id){
+
+    public void setAge(int age, int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_FILL_COLUMN_AGE)) {
             connection.setAutoCommit(false);

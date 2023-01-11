@@ -2,7 +2,7 @@ package lesson04.entity.people;
 
 public abstract class Professional extends Human {
     //Data
-    String profession ;
+    String profession;
     int skillLevel;
 
     //Constructors
@@ -32,15 +32,17 @@ public abstract class Professional extends Human {
     public void setSkillLevel(int skillLevel) {
         this.skillLevel = skillLevel;
     }
+
     public String getProfNameSurname() {
         return this.getClassShort(this.getClass().getName()) + " " + name + " " + surName;
     }
 
     //Skills
-    public void study () {
+    public void study() {
         System.out.println(getProfNameSurname() + " replenishes his knowledge");
     }
-    public void practice () {
+
+    public void practice() {
         System.out.println(getProfNameSurname() + " improves his skills with practice");
     }
 }

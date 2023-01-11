@@ -56,13 +56,15 @@ public final class Doctor extends Professional {
     public void examinePatient(String patient) {
         System.out.println(getProfNameSurname() + " examines patient " + patient);
     }
+
     public void provideFirstAid(String patient) {
         System.out.println(getProfNameSurname() + " provides first aid to " + patient);
         this.drugs--;
-        this.bandage-- ;
-        this.antibiotics-- ;
-        this.painkillers-- ;
+        this.bandage--;
+        this.antibiotics--;
+        this.painkillers--;
     }
+
     public void restock() {
         System.out.println(getProfNameSurname() + " replenished stocks of medicine ");
         this.drugs = 500;
@@ -73,35 +75,39 @@ public final class Doctor extends Professional {
 
     //Implementing interfaces
     @Override
-    public void makeDiagnostic(){
-        System.out.println(getProfNameSurname() + " checks medical equipment." );
+    public void makeDiagnostic() {
+        System.out.println(getProfNameSurname() + " checks medical equipment.");
     }
+
     @Override
     public void makeReport() {
-        System.out.println(getProfNameSurname() + " notes the condition of medical equipment." );
+        System.out.println(getProfNameSurname() + " notes the condition of medical equipment.");
     }
 
 
     @Override
     public void makeJob(String patient) {
-        System.out.println(getProfNameSurname() + " treats patient " + patient + "."  );
-    }
-    @Override
-    public void doBest(String patient) {
-        System.out.println(getProfNameSurname() + " saves life of " + patient + "." );
+        System.out.println(getProfNameSurname() + " treats patient " + patient + ".");
     }
 
     @Override
-    public void haveRest () {
+    public void doBest(String patient) {
+        System.out.println(getProfNameSurname() + " saves life of " + patient + ".");
+    }
+
+    @Override
+    public void haveRest() {
         System.out.println(getProfNameSurname() + " walks in park after job. ");
     }
+
     @Override
-    public void getSalary () {
-        System.out.println(getProfNameSurname() + " receives a good salary." );
-            }
+    public void getSalary() {
+        System.out.println(getProfNameSurname() + " receives a good salary.");
+    }
+
     @Override
-    public void getSatisfaction () {
-        System.out.println(getProfNameSurname() + " receives many thanks for help." );
+    public void getSatisfaction() {
+        System.out.println(getProfNameSurname() + " receives many thanks for help.");
     }
 
 

@@ -82,7 +82,7 @@ public class Main {
         System.out.println(String.format("Transaction sum \'%.2f\' accepted!", sender.getSum()));
         System.out.println("-----------------------------------");
 
-        transaction.sendMoney(sender,recipient.getClientAccountID());
+        transaction.sendMoney(sender, recipient.getClientAccountID());
         System.out.println();
         System.out.println("====== TRANSACTION COMPLETED ======");
     }

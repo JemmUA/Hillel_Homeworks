@@ -18,10 +18,11 @@ public class Director implements Communicator, Messenger {
         this.jobTitle = jobTitle;
     }
 
-    public void sayHello(String speaker){
+    public void sayHello(String speaker) {
         System.out.println("Hello, everybody! " + speaker + ".");
     }
-    public void sayGoodbye(String speaker){
+
+    public void sayGoodbye(String speaker) {
         System.out.println("Everybody can feel free util tomorrow. Thank You. " + speaker + ".");
     }
 

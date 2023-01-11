@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class MatchesHelper {
 
-    public void detectPattern(String string){
+    public void detectPattern(String string) {
 
         // STRICT MATCHES ======================
 
@@ -23,7 +23,7 @@ public class MatchesHelper {
         } else {
             matcher = pattern.matcher(" ".concat(string));
             int i = 0;
-            while (matcher.find()) ++i ;
+            while (matcher.find()) ++i;
             if (i > 0) System.out.println(String.format("Phone matches found: %d", i));
         }
 
@@ -36,7 +36,7 @@ public class MatchesHelper {
         } else {
             matcher = pattern.matcher(" ".concat(string));
             int i = 0;
-            while (matcher.find()) ++i ;
+            while (matcher.find()) ++i;
             if (i > 0) System.out.println(String.format("E-mail matches found: %d", i));
         }
 
@@ -51,7 +51,7 @@ public class MatchesHelper {
         } else {
             matcher = pattern.matcher(" ".concat(string));
             int i = 0;
-            while (matcher.find()) ++i ;
+            while (matcher.find()) ++i;
             if (i > 0) System.out.println(String.format("Date of birth matches found: %d", i));
         }
         System.out.println("-------------------------------");

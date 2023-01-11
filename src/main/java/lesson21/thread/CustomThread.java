@@ -2,7 +2,7 @@ package lesson21.thread;
 
 import lesson21.service.Counter;
 
-public class CustomThread extends Thread{
+public class CustomThread extends Thread {
     @Override
     public void run() {
         System.out.println("Custom thread: " + Thread.currentThread().getName());

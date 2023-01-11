@@ -24,7 +24,8 @@ public class MainStreamAPI {
         taskHeader(2);
         ArrayList<Integer> randoms = new ArrayList<>();
         int range = 200;
-        for (int i = 0 ; i < 20 ; i++) randoms.add((int)((Math.random() * range)-range/2)); // 20 integers in range -100 : 99
+        for (int i = 0; i < 20; i++)
+            randoms.add((int) ((Math.random() * range) - range / 2)); // 20 integers in range -100 : 99
         System.out.println("Collection 'randoms' of random Integers: " + randoms);
         Stream<Integer> integerStream = randoms.stream();
         List<Integer> oddNumbers = integerStream
@@ -44,7 +45,7 @@ public class MainStreamAPI {
         taskHeader(4);
         System.out.println("MORSE CODE");
         final String[][] morseArray = {
-                {"A", ".-  "}, {"B", "-..."}, {"C", "-.-."}, {"D", "-.. "}, {"E", "."   }, {"F", "..-."},
+                {"A", ".-  "}, {"B", "-..."}, {"C", "-.-."}, {"D", "-.. "}, {"E", "."}, {"F", "..-."},
                 {"G", "--. "}, {"H", "...."}, {"I", "..  "}, {"J", ".---"}, {"K", "-.- "}, {"L", ".-.."},
                 {"M", "--  "}, {"N", "-.  "}, {"O", "--- "}, {"P", ".--."}, {"Q", "--.-"}, {"R", ".-. "},
                 {"S", "... "}, {"T", "-   "}, {"U", "..- "}, {"V", "...-"}, {"W", ".-- "}, {"X", "-..-"},
@@ -55,9 +56,9 @@ public class MainStreamAPI {
         Stream<Map.Entry<String, String>> morseStream = morseMap.entrySet().stream();
         Map<String, String> morseCollection =
                 morseStream
-                .peek(System.out::println) // print as is
+                        .peek(System.out::println) // print as is
 //                .peek(map -> System.out.println(map.getKey() + " -> " + map.getValue())) // print in custom style
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+                        .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
         taskHeader(5);
         ArrayList<String> numbers = new ArrayList<>();
@@ -76,13 +77,13 @@ public class MainStreamAPI {
         Stream<String> numbersStream = numbers.stream();
         List<Integer> integers =
                 numbersStream
-                .skip(1)
-                .limit(8)
-                .map(Integer::valueOf)
+                        .skip(1)
+                        .limit(8)
+                        .map(Integer::valueOf)
 //                .mapToInt(numberStr -> Integer.valueOf(numberStr))
-                .filter(number -> number % 2 == 0)
-                .distinct()
-                .collect(toList());
+                        .filter(number -> number % 2 == 0)
+                        .distinct()
+                        .collect(toList());
         System.out.println("are: " + integers);
 
 
@@ -118,7 +119,7 @@ public class MainStreamAPI {
         guestsCount.get();
     }
 
-    public static void taskHeader (Integer task){
+    public static void taskHeader(Integer task) {
         String upperline = "\n";
         String underline = "\n------\n";
         System.out.printf(String.format("%sTask %d %s", upperline, task, underline));

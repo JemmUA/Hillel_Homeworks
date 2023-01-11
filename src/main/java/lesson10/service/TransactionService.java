@@ -5,6 +5,6 @@ import lesson10.util.Helper;
 
 public class TransactionService {
     public void sendMoney(Client client, String clientAccountID) {
-        Helper.checkUsers(client.getClientAccountID(),clientAccountID);
+        Helper.checkUsers(client.getClientAccountID(), clientAccountID);
     }
 }

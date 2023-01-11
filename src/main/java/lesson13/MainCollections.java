@@ -120,14 +120,14 @@ public class MainCollections {
 //        hashMap.keySet();
 //        hashMap.entrySet();
 
-        hashMap.put("a","A");
-        hashMap.put("b","B");
-        hashMap.put("c","C");
-        hashMap.put("d","D");
-        hashMap.put(1,"A");
-        hashMap.put(2,"B");
-        hashMap.put(3,"C");
-        hashMap.put(4,"D");
+        hashMap.put("a", "A");
+        hashMap.put("b", "B");
+        hashMap.put("c", "C");
+        hashMap.put("d", "D");
+        hashMap.put(1, "A");
+        hashMap.put(2, "B");
+        hashMap.put(3, "C");
+        hashMap.put(4, "D");
 
 
         System.out.println(hashMap.get("d"));

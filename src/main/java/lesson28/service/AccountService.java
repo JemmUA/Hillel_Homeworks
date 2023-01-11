@@ -13,6 +13,7 @@ public class AccountService {
     private String QUERY_UPDATE_CLIENTID_BY_ID = "UPDATE accounts SET client_id = ? WHERE id = ?";
     private String QUERY_DELETE_BY_ID = "DELETE FROM accounts WHERE id = ?";
     private String QUERY_GET_LONGER_NUMBER = "SELECT * FROM accounts WHERE LENGTH(number) > ?;";
+
     public List<Account> getAll() {
         List<Account> accounts = new ArrayList<>();
 
@@ -35,7 +36,7 @@ public class AccountService {
         return accounts;
     }
 
-    public void save (Account account){
+    public void save(Account account) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_SAVE)) {
             connection.setAutoCommit(false);
@@ -49,7 +50,7 @@ public class AccountService {
         }
     }
 
-    public void updateClientIdById (int clientId, int id){
+    public void updateClientIdById(int clientId, int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_UPDATE_CLIENTID_BY_ID)) {
             connection.setAutoCommit(false);
@@ -62,7 +63,7 @@ public class AccountService {
         }
     }
 
-    public void deleteById (int id){
+    public void deleteById(int id) {
         try (Connection connection = Database.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(QUERY_DELETE_BY_ID)) {
             connection.setAutoCommit(false);

@@ -99,7 +99,7 @@ public class MatchWorkshop {
         this.dateRegexDescription = dateRegexDescription;
     }
 
-    public boolean checkRegex(String string, String regex){
+    public boolean checkRegex(String string, String regex) {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(string);
         return matcher.matches();

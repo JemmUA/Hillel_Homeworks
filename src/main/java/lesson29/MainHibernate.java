@@ -1,20 +1,15 @@
 package lesson29;
 
-import lesson29.model.Account;
-import lesson29.model.Client;
-import lesson29.model.Status;
 import lesson29.service.AccountService;
 import lesson29.service.ClientService;
 import lesson29.service.StatusService;
-
-import java.util.List;
 
 public class MainHibernate {
     public static void main(String[] args) {
 
         ClientService clientService = new ClientService();
-        AccountService accountService= new AccountService();
-        StatusService statusService= new StatusService();
+        AccountService accountService = new AccountService();
+        StatusService statusService = new StatusService();
 //
 //        List<Client> clients = clientService.getAll();
 //        clients.forEach(System.out::println);
