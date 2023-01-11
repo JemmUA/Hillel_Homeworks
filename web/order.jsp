@@ -43,8 +43,8 @@
 </style>
 
 <body>
-<h2>Catalog of goods</h2>
-<a href="index">Home</a> <br> <br>
+<h2>My orders</h2>
+<a href="index">Catalog</a> <br> <br>
 <a href="cabinet">Cabinet</a> <br> <br>
 <a href="authorization">Authorization</a> <br> <br>
 <a href="about">About us</a> <br> <br>

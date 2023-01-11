@@ -44,7 +44,7 @@
 
 <body>
 <h2>Authorization</h2>
-<a href="index">Home</a> <br> <br>
+<a href="index">Catalog</a> <br> <br>
 <a href="order">Orders</a> <br> <br>
 <a href="cabinet">Cabinet</a> <br> <br>
 <a href="about">About us</a> <br> <br>
