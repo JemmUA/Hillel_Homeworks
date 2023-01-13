@@ -1,0 +1,480 @@
+2023-01-14 00:16:56 DEBUG JaccIntegrator:84 - Skipping JACC integration as it was not enabled
+2023-01-14 00:16:56 DEBUG EnumType:126 - Using NAMED-based conversion for Enum lesson31.domain.Category
+2023-01-14 00:16:56 DEBUG EnumType:126 - Using NAMED-based conversion for Enum lesson31.domain.LanguageWorld
+2023-01-14 00:16:56 DEBUG SessionFactoryImpl:316 - Instantiated session factory
+2023-01-14 00:16:56 DEBUG TypeConfiguration$Scope:154 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@160c3ec1] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@3fdecce]
+2023-01-14 00:16:56 DEBUG interceptor:46 - To-one property `lesson31.domain.Car#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:56 DEBUG interceptor:46 - To-one property `lesson31.domain.Car#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:56 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [lesson31.domain.Car] is safe
+2023-01-14 00:16:56 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : lesson31.domain.Car
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.Car#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.Car#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.DriverLicense#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.DriverLicense#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [lesson31.domain.DriverLicense] is safe
+2023-01-14 00:16:57 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : lesson31.domain.DriverLicense
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.DriverLicense#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.DriverLicense#client` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [lesson31.domain.Language] is safe
+2023-01-14 00:16:57 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : lesson31.domain.Language
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.Client#driverLicense` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.Client#driverLicense` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [lesson31.domain.Client] is safe
+2023-01-14 00:16:57 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : lesson31.domain.Client
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.Client#driverLicense` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG interceptor:46 - To-one property `lesson31.domain.Client#driverLicense` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:687 - Static SQL for collection: lesson31.domain.Language.clients
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:689 -  Row insert: insert into client_language (language_id, client_id) values (?, ?)
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:692 -  Row update: update client_language set client_id=? where language_id=? and client_id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:695 -  Row delete: delete from client_language where language_id=? and client_id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:698 -  One-shot delete: delete from client_language where language_id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:687 - Static SQL for collection: lesson31.domain.Client.cars
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:689 -  Row insert: update cars set client_id=? where id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:692 -  Row update: update cars set  where id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:695 -  Row delete: update cars set client_id=null where client_id=? and id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:698 -  One-shot delete: update cars set client_id=null where client_id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:687 - Static SQL for collection: lesson31.domain.Client.languages
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:689 -  Row insert: insert into client_language (client_id, language_id) values (?, ?)
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:692 -  Row update: update client_language set language_id=? where client_id=? and language_id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:695 -  Row delete: delete from client_language where client_id=? and language_id=?
+2023-01-14 00:16:57 DEBUG AbstractCollectionPersister:698 -  One-shot delete: delete from client_language where client_id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4002 - Static SQL for entity: lesson31.domain.Car
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4007 -  Version select: select id from cars where id =?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4010 -  Snapshot select: select car_.id, car_.client_id as client_i4_0_, car_.color as color2_0_, car_.model as model3_0_ from cars car_ where car_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into cars (client_id, color, model, id) values (?, ?, ?, ?)
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Update 0: update cars set client_id=?, color=?, model=? where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from cars where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4018 -  Identity insert: insert into cars (client_id, color, model) values (?, ?, ?)
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b6fcb9f]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2bfb6b49]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.about
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.cars
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : client.cars
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7f5538a1]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.category
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@53311681]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : client.driverLicense.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.email
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@26350ea2]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.languages
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@17273273]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@512d6e60]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.phone
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : color
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : model
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=lesson31.domain.Car)
+    - Returns
+       - EntityReturnImpl(entity=lesson31.domain.Car, querySpaceUid=<gen:0>, path=lesson31.domain.Car)
+          - EntityAttributeFetchImpl(entity=lesson31.domain.Client, querySpaceUid=<gen:1>, path=lesson31.domain.Car.client)
+             - EntityAttributeFetchImpl(entity=lesson31.domain.DriverLicense, querySpaceUid=<gen:2>, path=lesson31.domain.Car.client.driverLicense)
+                - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:3>, path=lesson31.domain.Car.client.driverLicense.humanInfo)
+             - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:4>, path=lesson31.domain.Car.client.humanInfo)
+             - CollectionAttributeFetchImpl(collection=lesson31.domain.Client.languages, querySpaceUid=<gen:5>, path=lesson31.domain.Car.client.languages)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Language, querySpaceUid=<gen:6>, path=lesson31.domain.Car.client.languages.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=lesson31.domain.Car)
+          - SQL table alias mapping - car0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(client)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=lesson31.domain.Client)
+                - SQL table alias mapping - client1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(driverLicense)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=lesson31.domain.DriverLicense)
+                      - SQL table alias mapping - driverlice2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_3_2_}
+                      - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:2> -> <gen:3>
+                         - CompositeQuerySpaceImpl(uid=<gen:3>)
+                            - SQL table alias mapping - driverlice2_
+                - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:1> -> <gen:4>
+                   - CompositeQuerySpaceImpl(uid=<gen:4>)
+                      - SQL table alias mapping - client1_
+
+2023-01-14 00:16:57 DEBUG EntityLoader:129 - Static select for entity lesson31.domain.Car [NONE]: select car0_.id as id1_0_0_, car0_.client_id as client_i4_0_0_, car0_.color as color2_0_0_, car0_.model as model3_0_0_, client1_.id as id1_2_1_, client1_.about as about2_2_1_, client1_.driver_license_id as driver_10_2_1_, client1_.email as email3_2_1_, client1_.age as age4_2_1_, client1_.name as name5_2_1_, client1_.nationality as national6_2_1_, client1_.sex as sex7_2_1_, client1_.surname as surname8_2_1_, client1_.phone as phone9_2_1_, driverlice2_.id as id1_3_2_, driverlice2_.category as category2_3_2_, driverlice2_.age as age3_3_2_, driverlice2_.name as name4_3_2_, driverlice2_.nationality as national5_3_2_, driverlice2_.sex as sex6_3_2_, driverlice2_.surname as surname7_3_2_ from cars car0_ left outer join clients client1_ on car0_.client_id=client1_.id left outer join driver_licenses driverlice2_ on client1_.driver_license_id=driverlice2_.id where car0_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4002 - Static SQL for entity: lesson31.domain.DriverLicense
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4007 -  Version select: select id from driver_licenses where id =?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4010 -  Snapshot select: select driverlice_.id, driverlice_.category as category2_3_, driverlice_.age as age3_3_, driverlice_.name as name4_3_, driverlice_.nationality as national5_3_, driverlice_.sex as sex6_3_, driverlice_.surname as surname7_3_ from driver_licenses driverlice_ where driverlice_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into driver_licenses (category, age, name, nationality, sex, surname, id) values (?, ?, ?, ?, ?, ?, ?)
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Update 0: update driver_licenses set category=?, age=?, name=?, nationality=?, sex=?, surname=? where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from driver_licenses where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4018 -  Identity insert: insert into driver_licenses (category, age, name, nationality, sex, surname) values (?, ?, ?, ?, ?, ?)
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2975a9e]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : category
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@57562473]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@424de326]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.about
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.cars
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2dd0f797]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@67064bdc]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.cars.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : client.cars.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.cars.color
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.cars.model
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.driverLicense
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : client.driverLicense
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.email
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@177515d1]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.languages
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4c2af006]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@44032fde]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client.phone
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=lesson31.domain.DriverLicense)
+    - Returns
+       - EntityReturnImpl(entity=lesson31.domain.DriverLicense, querySpaceUid=<gen:0>, path=lesson31.domain.DriverLicense)
+          - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:1>, path=lesson31.domain.DriverLicense.humanInfo)
+          - EntityAttributeFetchImpl(entity=lesson31.domain.Client, querySpaceUid=<gen:2>, path=lesson31.domain.DriverLicense.client)
+             - CollectionAttributeFetchImpl(collection=lesson31.domain.Client.cars, querySpaceUid=<gen:3>, path=lesson31.domain.DriverLicense.client.cars)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Car, querySpaceUid=<gen:4>, path=lesson31.domain.DriverLicense.client.cars.<elements>)
+             - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:5>, path=lesson31.domain.DriverLicense.client.humanInfo)
+             - CollectionAttributeFetchImpl(collection=lesson31.domain.Client.languages, querySpaceUid=<gen:6>, path=lesson31.domain.DriverLicense.client.languages)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Language, querySpaceUid=<gen:7>, path=lesson31.domain.DriverLicense.client.languages.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=lesson31.domain.DriverLicense)
+          - SQL table alias mapping - driverlice0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_3_0_}
+          - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:0> -> <gen:1>
+             - CompositeQuerySpaceImpl(uid=<gen:1>)
+                - SQL table alias mapping - driverlice0_
+          - JOIN (JoinDefinedByMetadata(client)) : <gen:0> -> <gen:2>
+             - EntityQuerySpaceImpl(uid=<gen:2>, entity=lesson31.domain.Client)
+                - SQL table alias mapping - client1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(cars)) : <gen:2> -> <gen:3>
+                   - CollectionQuerySpaceImpl(uid=<gen:3>, collection=lesson31.domain.Client.cars)
+                      - SQL table alias mapping - cars2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {client_i4_0_2_}
+                      - entity-element alias suffix - 3_
+                      - 3_entity-element suffixed key columns - id1_0_3_
+                      - JOIN (JoinDefinedByMetadata(elements)) : <gen:3> -> <gen:4>
+                         - EntityQuerySpaceImpl(uid=<gen:4>, entity=lesson31.domain.Car)
+                            - SQL table alias mapping - cars2_
+                            - alias suffix - 3_
+                            - suffixed key columns - {id1_0_3_}
+                - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:2> -> <gen:5>
+                   - CompositeQuerySpaceImpl(uid=<gen:5>)
+                      - SQL table alias mapping - client1_
+
+2023-01-14 00:16:57 DEBUG EntityLoader:129 - Static select for entity lesson31.domain.DriverLicense [NONE]: select driverlice0_.id as id1_3_0_, driverlice0_.category as category2_3_0_, driverlice0_.age as age3_3_0_, driverlice0_.name as name4_3_0_, driverlice0_.nationality as national5_3_0_, driverlice0_.sex as sex6_3_0_, driverlice0_.surname as surname7_3_0_, client1_.id as id1_2_1_, client1_.about as about2_2_1_, client1_.driver_license_id as driver_10_2_1_, client1_.email as email3_2_1_, client1_.age as age4_2_1_, client1_.name as name5_2_1_, client1_.nationality as national6_2_1_, client1_.sex as sex7_2_1_, client1_.surname as surname8_2_1_, client1_.phone as phone9_2_1_, cars2_.client_id as client_i4_0_2_, cars2_.id as id1_0_2_, cars2_.id as id1_0_3_, cars2_.client_id as client_i4_0_3_, cars2_.color as color2_0_3_, cars2_.model as model3_0_3_ from driver_licenses driverlice0_ left outer join clients client1_ on driverlice0_.id=client1_.driver_license_id left outer join cars cars2_ on client1_.id=cars2_.client_id where driverlice0_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4002 - Static SQL for entity: lesson31.domain.Language
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4007 -  Version select: select id from languages where id =?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4010 -  Snapshot select: select language_.id, language_.language as language2_4_ from languages language_ where language_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into languages (language, id) values (?, ?)
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Update 0: update languages set language=? where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from languages where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4018 -  Identity insert: insert into languages (language) values (?)
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@12e5da86]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : clients
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1d1cbd0f]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6fa13e6]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : language
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=lesson31.domain.Language)
+    - Returns
+       - EntityReturnImpl(entity=lesson31.domain.Language, querySpaceUid=<gen:0>, path=lesson31.domain.Language)
+          - CollectionAttributeFetchImpl(collection=lesson31.domain.Language.clients, querySpaceUid=<gen:1>, path=lesson31.domain.Language.clients)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Client, querySpaceUid=<gen:2>, path=lesson31.domain.Language.clients.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=lesson31.domain.Language)
+          - SQL table alias mapping - language0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_4_0_}
+
+2023-01-14 00:16:57 DEBUG EntityLoader:129 - Static select for entity lesson31.domain.Language [NONE]: select language0_.id as id1_4_0_, language0_.language as language2_4_0_ from languages language0_ where language0_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4002 - Static SQL for entity: lesson31.domain.Client
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4007 -  Version select: select id from clients where id =?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4010 -  Snapshot select: select client_.id, client_.about as about2_2_, client_.driver_license_id as driver_10_2_, client_.email as email3_2_, client_.age as age4_2_, client_.name as name5_2_, client_.nationality as national6_2_, client_.sex as sex7_2_, client_.surname as surname8_2_, client_.phone as phone9_2_ from clients client_ where client_.id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into clients (about, driver_license_id, email, age, name, nationality, sex, surname, phone, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Update 0: update clients set about=?, driver_license_id=?, email=?, age=?, name=?, nationality=?, sex=?, surname=?, phone=? where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from clients where id=?
+2023-01-14 00:16:57 DEBUG AbstractEntityPersister:4018 -  Identity insert: insert into clients (about, driver_license_id, email, age, name, nationality, sex, surname, phone) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3af7d855]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : about
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : cars
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@f88bfbe]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@59bbe88a]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : cars.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : cars.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : cars.color
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : cars.model
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@446626a7]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.category
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@4a2929a4]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : driverLicense.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : email
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@797c3c3b]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : languages
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4375b013]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1cf0cacc]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : phone
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=lesson31.domain.Client)
+    - Returns
+       - EntityReturnImpl(entity=lesson31.domain.Client, querySpaceUid=<gen:0>, path=lesson31.domain.Client)
+          - CollectionAttributeFetchImpl(collection=lesson31.domain.Client.cars, querySpaceUid=<gen:1>, path=lesson31.domain.Client.cars)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Car, querySpaceUid=<gen:2>, path=lesson31.domain.Client.cars.<elements>)
+          - EntityAttributeFetchImpl(entity=lesson31.domain.DriverLicense, querySpaceUid=<gen:3>, path=lesson31.domain.Client.driverLicense)
+             - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:4>, path=lesson31.domain.Client.driverLicense.humanInfo)
+          - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:5>, path=lesson31.domain.Client.humanInfo)
+          - CollectionAttributeFetchImpl(collection=lesson31.domain.Client.languages, querySpaceUid=<gen:6>, path=lesson31.domain.Client.languages)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Language, querySpaceUid=<gen:7>, path=lesson31.domain.Client.languages.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=lesson31.domain.Client)
+          - SQL table alias mapping - client0_
+          - alias suffix - 0_
+          - suffixed key columns - {id1_2_0_}
+          - JOIN (JoinDefinedByMetadata(cars)) : <gen:0> -> <gen:1>
+             - CollectionQuerySpaceImpl(uid=<gen:1>, collection=lesson31.domain.Client.cars)
+                - SQL table alias mapping - cars1_
+                - alias suffix - 1_
+                - suffixed key columns - {client_i4_0_1_}
+                - entity-element alias suffix - 2_
+                - 2_entity-element suffixed key columns - id1_0_2_
+                - JOIN (JoinDefinedByMetadata(elements)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=lesson31.domain.Car)
+                      - SQL table alias mapping - cars1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_0_2_}
+          - JOIN (JoinDefinedByMetadata(driverLicense)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=lesson31.domain.DriverLicense)
+                - SQL table alias mapping - driverlice2_
+                - alias suffix - 3_
+                - suffixed key columns - {id1_3_3_}
+                - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:3> -> <gen:4>
+                   - CompositeQuerySpaceImpl(uid=<gen:4>)
+                      - SQL table alias mapping - driverlice2_
+          - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:0> -> <gen:5>
+             - CompositeQuerySpaceImpl(uid=<gen:5>)
+                - SQL table alias mapping - client0_
+
+2023-01-14 00:16:57 DEBUG EntityLoader:129 - Static select for entity lesson31.domain.Client [NONE]: select client0_.id as id1_2_0_, client0_.about as about2_2_0_, client0_.driver_license_id as driver_10_2_0_, client0_.email as email3_2_0_, client0_.age as age4_2_0_, client0_.name as name5_2_0_, client0_.nationality as national6_2_0_, client0_.sex as sex7_2_0_, client0_.surname as surname8_2_0_, client0_.phone as phone9_2_0_, cars1_.client_id as client_i4_0_1_, cars1_.id as id1_0_1_, cars1_.id as id1_0_2_, cars1_.client_id as client_i4_0_2_, cars1_.color as color2_0_2_, cars1_.model as model3_0_2_, driverlice2_.id as id1_3_3_, driverlice2_.category as category2_3_3_, driverlice2_.age as age3_3_3_, driverlice2_.name as name4_3_3_, driverlice2_.nationality as national5_3_3_, driverlice2_.sex as sex6_3_3_, driverlice2_.surname as surname7_3_3_ from clients client0_ left outer join cars cars1_ on client0_.id=cars1_.client_id inner join driver_licenses driverlice2_ on client0_.driver_license_id=driverlice2_.id where client0_.id=?
+2023-01-14 00:16:57 DEBUG Loader:106 - Static select for entity lesson31.domain.Client [NONE]: select client0_.id as id1_2_2_, client0_.about as about2_2_2_, client0_.driver_license_id as driver_10_2_2_, client0_.email as email3_2_2_, client0_.age as age4_2_2_, client0_.name as name5_2_2_, client0_.nationality as national6_2_2_, client0_.sex as sex7_2_2_, client0_.surname as surname8_2_2_, client0_.phone as phone9_2_2_, cars1_.client_id as client_i4_0_4_, cars1_.id as id1_0_4_, cars1_.id as id1_0_0_, cars1_.client_id as client_i4_0_0_, cars1_.color as color2_0_0_, cars1_.model as model3_0_0_, driverlice2_.id as id1_3_1_, driverlice2_.category as category2_3_1_, driverlice2_.age as age3_3_1_, driverlice2_.name as name4_3_1_, driverlice2_.nationality as national5_3_1_, driverlice2_.sex as sex6_3_1_, driverlice2_.surname as surname7_3_1_ from clients client0_ left outer join cars cars1_ on client0_.id=cars1_.client_id inner join driver_licenses driverlice2_ on client0_.driver_license_id=driverlice2_.id where client0_.driver_license_id=?
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@75a0c890]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@358ab600]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : about
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : cars
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@3791f50e]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@574b7f4a]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@44ed0a8f]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.category
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@a96d56c]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : driverLicense.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : driverLicense.client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : email
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@2abe9173]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.age
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.name
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.nationality
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.sex
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : humanInfo.surname
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : languages
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : languages
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : phone
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=lesson31.domain.Language.clients)
+    - Returns
+       - CollectionReturnImpl(collection=lesson31.domain.Language.clients, querySpaceUid=<gen:0>, path=[lesson31.domain.Language.clients])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Client, querySpaceUid=<gen:1>, path=[lesson31.domain.Language.clients].<elements>)
+             - CollectionAttributeFetchImpl(collection=lesson31.domain.Client.cars, querySpaceUid=<gen:2>, path=[lesson31.domain.Language.clients].<elements>.cars)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Car, querySpaceUid=<gen:3>, path=[lesson31.domain.Language.clients].<elements>.cars.<elements>)
+             - EntityAttributeFetchImpl(entity=lesson31.domain.DriverLicense, querySpaceUid=<gen:4>, path=[lesson31.domain.Language.clients].<elements>.driverLicense)
+                - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:5>, path=[lesson31.domain.Language.clients].<elements>.driverLicense.humanInfo)
+             - CompositeAttributeFetchImpl(composite=lesson31.domain.HumanInfo, querySpaceUid=<gen:6>, path=[lesson31.domain.Language.clients].<elements>.humanInfo)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=lesson31.domain.Language.clients)
+          - SQL table alias mapping - clients0_
+          - alias suffix - 0_
+          - suffixed key columns - {language2_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=lesson31.domain.Client)
+                - SQL table alias mapping - client1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_2_1_}
+                - JOIN (JoinDefinedByMetadata(driverLicense)) : <gen:1> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=lesson31.domain.DriverLicense)
+                      - SQL table alias mapping - driverlice2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {id1_3_2_}
+                      - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:4> -> <gen:5>
+                         - CompositeQuerySpaceImpl(uid=<gen:5>)
+                            - SQL table alias mapping - driverlice2_
+                - JOIN (JoinDefinedByMetadata(humanInfo)) : <gen:1> -> <gen:6>
+                   - CompositeQuerySpaceImpl(uid=<gen:6>)
+                      - SQL table alias mapping - client1_
+
+2023-01-14 00:16:57 DEBUG CollectionLoader:83 - Static select for collection lesson31.domain.Language.clients: select clients0_.language_id as language2_1_0_, clients0_.client_id as client_i1_1_0_, client1_.id as id1_2_1_, client1_.about as about2_2_1_, client1_.driver_license_id as driver_10_2_1_, client1_.email as email3_2_1_, client1_.age as age4_2_1_, client1_.name as name5_2_1_, client1_.nationality as national6_2_1_, client1_.sex as sex7_2_1_, client1_.surname as surname8_2_1_, client1_.phone as phone9_2_1_, driverlice2_.id as id1_3_2_, driverlice2_.category as category2_3_2_, driverlice2_.age as age3_3_2_, driverlice2_.name as name4_3_2_, driverlice2_.nationality as national5_3_2_, driverlice2_.sex as sex6_3_2_, driverlice2_.surname as surname7_3_2_ from client_language clients0_ inner join clients client1_ on clients0_.client_id=client1_.id inner join driver_licenses driverlice2_ on client1_.driver_license_id=driverlice2_.id where clients0_.language_id=?
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5a75ec37]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2c05ff9d]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : client
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : color
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : model
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=lesson31.domain.Client.cars)
+    - Returns
+       - CollectionReturnImpl(collection=lesson31.domain.Client.cars, querySpaceUid=<gen:0>, path=[lesson31.domain.Client.cars])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Car, querySpaceUid=<gen:1>, path=[lesson31.domain.Client.cars].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=lesson31.domain.Client.cars)
+          - SQL table alias mapping - cars0_
+          - alias suffix - 0_
+          - suffixed key columns - {client_i4_0_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_0_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=lesson31.domain.Car)
+                - SQL table alias mapping - cars0_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_0_1_}
+
+2023-01-14 00:16:57 DEBUG CollectionLoader:83 - Static select for collection lesson31.domain.Client.cars: select cars0_.client_id as client_i4_0_0_, cars0_.id as id1_0_0_, cars0_.id as id1_0_1_, cars0_.client_id as client_i4_0_1_, cars0_.color as color2_0_1_, cars0_.model as model3_0_1_ from cars cars0_ where cars0_.client_id=?
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5a8ab2]
+2023-01-14 00:16:57 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3f50b680]
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : clients
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : clients
+2023-01-14 00:16:57 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : language
+2023-01-14 00:16:57 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2023-01-14 00:16:57 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2023-01-14 00:16:57 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=lesson31.domain.Client.languages)
+    - Returns
+       - CollectionReturnImpl(collection=lesson31.domain.Client.languages, querySpaceUid=<gen:0>, path=[lesson31.domain.Client.languages])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=lesson31.domain.Language, querySpaceUid=<gen:1>, path=[lesson31.domain.Client.languages].<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=lesson31.domain.Client.languages)
+          - SQL table alias mapping - languages0_
+          - alias suffix - 0_
+          - suffixed key columns - {client_i1_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - id1_4_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=lesson31.domain.Language)
+                - SQL table alias mapping - language1_
+                - alias suffix - 1_
+                - suffixed key columns - {id1_4_1_}
+
+2023-01-14 00:16:57 DEBUG CollectionLoader:83 - Static select for collection lesson31.domain.Client.languages: select languages0_.client_id as client_i1_1_0_, languages0_.language_id as language2_1_0_, language1_.id as id1_4_1_, language1_.language as language2_4_1_ from client_language languages0_ inner join languages language1_ on languages0_.language_id=language1_.id where languages0_.client_id=?
+2023-01-14 00:16:57 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@404eca05] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2023-01-14 00:16:57 DEBUG Table:497 - No alter strings for table : cars
+2023-01-14 00:16:57 DEBUG Table:497 - No alter strings for table : client_language
+2023-01-14 00:16:57 DEBUG Table:497 - No alter strings for table : clients
+2023-01-14 00:16:57 DEBUG Table:497 - No alter strings for table : driver_licenses
+2023-01-14 00:16:57 DEBUG Table:497 - No alter strings for table : languages
+2023-01-14 00:16:57 DEBUG JtaPlatformInitiator:43 - No JtaPlatform was specified, checking resolver
+2023-01-14 00:16:57 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2023-01-14 00:16:57 DEBUG StandardJtaPlatformResolver:137 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-14 00:16:57 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-14 00:16:57 DEBUG NamedQueryRepository:171 - Checking 0 named HQL queries
+2023-01-14 00:16:57 DEBUG NamedQueryRepository:185 - Checking 0 named SQL queries
+2023-01-14 00:16:57 DEBUG SessionFactoryServiceRegistryImpl:92 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2023-01-14 00:16:57 DEBUG SessionFactoryRegistry:51 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@29b40b3
+2023-01-14 00:16:57 DEBUG SessionFactoryRegistry:73 - Registering SessionFactory: 13ec9f53-b292-475f-a188-e804bbaa53e1 (<unnamed>)
+2023-01-14 00:16:57 DEBUG SessionFactoryRegistry:80 - Not binding SessionFactory to JNDI, no JNDI name configured
+2023-01-14 00:16:57 DEBUG StatisticsInitiator:101 - Statistics initialized [enabled=false]
+2023-01-14 00:16:57 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2023-01-14 00:16:57 DEBUG TransactionImpl:81 - begin
+2023-01-14 00:16:57 DEBUG ActionQueue:281 - Executing identity-insert immediately
+2023-01-14 00:16:57 DEBUG SQL:144 - insert into languages (language) values (?)
+2023-01-14 00:16:57 DEBUG SqlExceptionHelper:126 - could not execute statement [n/a]
+org.postgresql.util.PSQLException: ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_ietcpansdtkcg5thwstwi0sc"
+  Detail: Ключ "(language)=(UKRAINIAN)" уже существует.
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2676)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2366)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:356)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:496)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:413)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:152)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:58)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:43)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3279)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3885)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:84)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:330)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:287)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:193)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:123)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:194)
+	at org.hibernate.event.internal.DefaultSaveEventListener.saveWithGeneratedOrRequestedId(DefaultSaveEventListener.java:38)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:179)
+	at org.hibernate.event.internal.DefaultSaveEventListener.performSaveOrUpdate(DefaultSaveEventListener.java:32)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:75)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:107)
+	at org.hibernate.internal.SessionImpl.fireSave(SessionImpl.java:672)
+	at org.hibernate.internal.SessionImpl.save(SessionImpl.java:665)
+	at org.hibernate.internal.SessionImpl.save(SessionImpl.java:660)
+	at lesson31.dao.LanguageDao.save(LanguageDao.java:21)
+	at lesson31.service.LanguageService.save(LanguageService.java:16)
+	at lesson31.MainHibernateConfig.main(MainHibernateConfig.java:27)
+2023-01-14 00:16:57 WARN  SqlExceptionHelper:137 - SQL Error: 0, SQLState: 23505
+2023-01-14 00:16:57 ERROR SqlExceptionHelper:142 - ОШИБКА: повторяющееся значение ключа нарушает ограничение уникальности "uk_ietcpansdtkcg5thwstwi0sc"
+  Detail: Ключ "(language)=(UKRAINIAN)" уже существует.

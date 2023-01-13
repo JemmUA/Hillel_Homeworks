@@ -18,6 +18,7 @@ public class Client {
     private Integer id;
     @Embedded
     private HumanInfo humanInfo;
+    @Column(nullable = false)
     private String email;
     private Long phone;
     private String about;

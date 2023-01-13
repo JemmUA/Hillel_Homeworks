@@ -17,6 +17,7 @@ public class DriverLicense {
     @Embedded
     private HumanInfo humanInfo;
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Category category;
 
 
