@@ -67,10 +67,10 @@ Response status: 200 OK
 1.8. GET: https://jsonplaceholder.typicode.com/posts
 1.9. GET: https://jsonplaceholder.typicode.com/posts/99
 Response status: 200 OK
-in this case we get post #99
+in this case we get entity post #99
 or GET: https://jsonplaceholder.typicode.com/posts?id=99
 Response status: 200 OK
-in this case we get collection with only post #99
+in this case we get collection with only entity post #99
 1.10 POST: https://jsonplaceholder.typicode.com/posts
 Body:
     {
