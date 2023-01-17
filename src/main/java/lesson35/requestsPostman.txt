@@ -1,0 +1,87 @@
+Requests Postman:
+1.1. GET: https://jsonplaceholder.typicode.com/users
+Response status: 200 OK
+1.2. GET:  https://jsonplaceholder.typicode.com/users/5
+Response status: 200 OK
+1.3. PATCH: https://jsonplaceholder.typicode.com/users/5
+Body setup (the same for all badies in our case):
+raw
+JSON
+Body:
+{"email":"user_new_mail@mail.ua", "phone":"097-333-55-11", "website":"userwebsite.com.ua"}
+Response status: 200 OK
+1.4. POST: https://jsonplaceholder.typicode.com/users
+Body:
+{
+    "name": "John Jonson",
+    "username": "Jonny",
+    "email": "jonny@gmail.com",
+    "address": {
+        "street": "Wall Street",
+        "suite": "Suite 1",
+        "city": "New York",
+        "zipcode": "6238402992",
+        "geo": {
+            "lat": "23432.6463",
+            "lng": "23432.8889"
+        }
+    },
+    "phone": "111111111111111",
+    "website": "johny.com",
+    "company": {
+        "name": "Father and Sons",
+        "catchPhrase": "Best project",
+        "bs": "super technologies"
+    }
+}
+Response status: 201 OK
+1.5. PUT: https://jsonplaceholder.typicode.com/users/1
+Body:
+{
+    "name": "John Jonson",
+    "username": "JonnyJonny",
+    "email": "jonny2@gmail.com",
+    "address": {
+        "street": "Wall Street",
+        "suite": "Suite 1",
+        "city": "New York",
+        "zipcode": "6238402992",
+        "geo": {
+            "lat": "23432.6463",
+            "lng": "23432.8889"
+        }
+    },
+    "phone": "222222222",
+    "website": "newjohny.com",
+    "company": {
+        "name": "Father and Sons",
+        "catchPhrase": "Best project",
+        "bs": "super technologies"
+    }
+}
+Response status: 200 OK
+1.6. GET: https://jsonplaceholder.typicode.com/posts?userId=7
+Response status: 200 OK
+1.7. GET: https://jsonplaceholder.typicode.com/todos?userId=7
+Response status: 200 OK
+1.8. GET: https://jsonplaceholder.typicode.com/posts
+1.9. GET: https://jsonplaceholder.typicode.com/posts/99
+Response status: 200 OK
+in this case we get post #99
+or GET: https://jsonplaceholder.typicode.com/posts?id=99
+Response status: 200 OK
+in this case we get collection with only post #99
+1.10 POST: https://jsonplaceholder.typicode.com/posts
+Body:
+    {
+        "userId": 33333,
+        "title": "Great post",
+        "body": "poooooooooooooooooooooostpoooooooooooooooooooooostpoooooooooooooooooooooost poooooooooooooooooooooost"
+    }
+Response status: 201 OK
+1.11. PATCH: https://jsonplaceholder.typicode.com/posts/99
+Body:
+    {
+        "body": "This string is a body of post in the body of request ))"
+    }
+Response status: 200 OK
