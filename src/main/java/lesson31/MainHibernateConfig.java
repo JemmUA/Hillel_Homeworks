@@ -19,13 +19,13 @@ public class MainHibernateConfig {
         HashSet<Language> languages = new HashSet<>();
 
         HashSet<Car> cars = new HashSet<>();
-
-        for (LanguageWorld currentLanguage : LanguageWorld.values()) {
-            Language language = new Language();
-            language.setLanguage(currentLanguage);
-            languages.add(language);
-            languageService.save(language);
-        }
+//
+//        for (LanguageWorld currentLanguage : LanguageWorld.values()) {
+//            Language language = new Language();
+//            language.setLanguage(currentLanguage);
+//            languages.add(language);
+//            languageService.save(language);
+//        }
 
         HumanInfo humanInfo = new HumanInfo();
         humanInfo.setName("Alex");

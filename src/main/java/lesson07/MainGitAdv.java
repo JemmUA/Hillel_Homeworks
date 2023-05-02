@@ -9,7 +9,7 @@ public class MainGitAdv {
     Внешний репозиторий:
     https://github.com/JemmUA/Hillel_Homeworks.git
 
-1. Pullrequests.
+1. PullRequests.
 2. Исключения для ветки main.
 3. Использование команды stash:
 
@@ -51,7 +51,7 @@ public class MainGitAdv {
     Dropped refs/stash@{0} (04176fa945af7f159a135d3f6775db9df39ed37d)
     Делаем commit и push
 
-    git commit -am “add some neccesary changes to develop”
+    git commit -am “add some necessary changes to develop”
     git push origin develop
 
     Здесь надо было бы вернуться в main и сделать git merge develop (из-за чего типа весь сырбор), но мы сейчас не будем портить мержреквесты.

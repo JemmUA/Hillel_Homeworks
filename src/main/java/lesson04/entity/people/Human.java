@@ -5,7 +5,7 @@ import lesson04.entity.skills.JobSatisfaction;
 
 public abstract class Human implements Diagnostics, JobSatisfaction {
     //Data
-    String name;
+    public String name;
     String surName;
     int age;
     String sex;
