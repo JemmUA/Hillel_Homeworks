@@ -9,6 +9,7 @@ public class MainGit {
     //      and move to this
     //      branch:                 git branch -b newbranch
     //      cansel failed marge:    git merge --abort
-    //      restore before
-    //      closing IDEA:           git restore
+    //      restore changes before
+    //      closing IDEA
+    //      (not files):           git restore .
 }
